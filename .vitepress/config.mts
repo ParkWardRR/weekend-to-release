@@ -3,13 +3,21 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
     title: "Weekend-to-Release",
-    description: "The Definitive Guide to Building with AI Agents & Shipping Like a Pro",
-    base: "/weekend-to-release/", // Set base to /weekend-to-release/ if deploying to GitHub Pages or similar
+    description: "The complete course for building with AI agents and shipping real products.",
+    base: "/weekend-to-release/",
+    srcExclude: [
+        'README.md',
+        'CONTRIBUTING.md',
+        'CODE_OF_CONDUCT.md',
+        'LICENSE.md',
+        'SECURITY.md',
+        'docs/**',
+    ],
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Cheatsheet', link: '/CHEATSHEET' },
-            { text: 'Curriculum', link: '/curriculum/ai_skills/01_the_ai_stack' },
+            { text: 'Start Learning', link: '/curriculum/ai_skills/01_the_ai_stack' },
         ],
 
         sidebar: {
@@ -17,7 +25,7 @@ export default defineConfig({
                 {
                     text: 'Phase 1: From Blank Page to "It Runs"',
                     items: [
-                        { text: 'Overview', link: '/curriculum/ai_skills/01_the_ai_stack' },
+                        { text: 'The AI Stack', link: '/curriculum/ai_skills/01_the_ai_stack' },
                         { text: 'Prompt Engineering', link: '/curriculum/ai_skills/02_prompt_engineering' },
                         { text: 'Agentic Workflow', link: '/curriculum/ai_skills/03_agentic_workflow' },
                         { text: 'Context Mastery', link: '/curriculum/ai_skills/04_context_management' },
@@ -25,7 +33,7 @@ export default defineConfig({
                     ]
                 },
                 {
-                    text: 'Phase 2: The Logic (What to Build)',
+                    text: 'Phase 2: What to Build',
                     items: [
                         { text: 'Idea Filter', link: '/curriculum/01_idea_filter' },
                         { text: 'MVP Scope', link: '/curriculum/02_mvp_scope' },
@@ -39,7 +47,7 @@ export default defineConfig({
                         { text: 'Testing Strategy', link: '/curriculum/05_testing' },
                         { text: 'Versioning', link: '/curriculum/06_versioning' },
                         { text: 'Support Loop', link: '/curriculum/07_support_loop' },
-                        { text: 'Launch Roadmap', link: '/curriculum/08_launch_feedback' },
+                        { text: 'Launch & Roadmap', link: '/curriculum/08_launch_feedback' },
                     ]
                 }
             ]
@@ -51,11 +59,10 @@ export default defineConfig({
 
         footer: {
             message: 'Released under the Blue Oak Model License 1.0.0.',
-            copyright: 'Copyright © 2024-present Twesh'
+            copyright: 'Copyright © 2024-present Weekend-to-Release Contributors'
         }
     },
     rewrites: {
-        'README.md': 'index.md', // Use README.md as the homepage
         'CHEATSHEET.md': 'cheatsheet.md',
         'curriculum/:path*': 'curriculum/:path*'
     },

@@ -15,7 +15,7 @@ git add -A
 git commit -m "deploy: $(date)"
 
 # Using the HTTPS URL provided
-git push -f https://github.com/ParkWardRR/weekend-to-release.git master:gh-pages
+git push -f https://github.com/ParkWardRR/weekend-to-release.git HEAD:gh-pages
 
 cd -
 echo "Deployment Complete!"

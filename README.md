@@ -1,105 +1,118 @@
 <div align="center">
 
-# 🚀 Weekend-to-Release (Agentic Edition)
+# Weekend-to-Release (Agentic Edition)
 
 ### From Idea to "It Runs" to "It Ships"
-#### The Definitive Guide to Building with AI Agents & Shipping Like a Pro.
 
 [![License: Blue Oak 1.0.0](https://img.shields.io/badge/License-Blue_Oak_1.0.0-blue.svg)](https://blueoakcouncil.org/license/1.0.0)
 [![Status: Active](https://img.shields.io/badge/Status-Active_Maintenance-brightgreen.svg?style=flat-square)](https://github.com/ParkWardRR/weekend-to-release)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg?style=flat-square)](http://makeapullrequest.com)
-[![Mermaid JS](https://img.shields.io/badge/Diagrams-Mermaid_JS-ff69b4.svg?style=flat-square)](https://mermaid.js.org/)
+[![Diagrams: Mermaid](https://img.shields.io/badge/Diagrams-Mermaid_JS-ff69b4.svg?style=flat-square)](https://mermaid.js.org/)
 [![Curriculum: 13 Modules](https://img.shields.io/badge/Course-13_Modules-blueviolet.svg?style=flat-square)](./curriculum)
-[![Docs: Online](https://img.shields.io/badge/Docs-Read_Online-success)](https://parkwardrr.github.io/weekend-to-release/)
+
+---
+
+### **[Read the Course Online](https://parkwardrr.github.io/weekend-to-release/)**
+
+If you're here to **learn**, head straight to the live site above.
+Everything below is for **editors, contributors, and maintainers** of this curriculum.
+
+---
 
 </div>
 
----
+## About This Repository
 
-## 📖 About This Repo
+This repo is the source content for **Weekend-to-Release** — a 13-module curriculum that teaches builders how to go from a weekend idea to a versioned, installable product using AI agents.
 
-**Weekend-to-Release** is a comprehensive curriculum that covers the **entire lifecycle** of software creation using AI Agents:
+The Markdown files in this repo are compiled into a static site via [VitePress](https://vitepress.dev) and deployed to GitHub Pages. Students interact with the published site. Contributors and editors work here.
 
-1.  **Idea ➡️ "It Runs"**: How to use AI Agents to turn a vague thought into working, functional code.
-2.  **"It Runs" ➡️ "It Ships"**: How to take that working code and apply the rigorous "boring stuff" (packaging, docs, versioning) that turns it into a real product.
+### How It Works
 
-### The Problem
-Most creators get stuck in two places:
-1.  **The "Blank Page" Paralysis:** They have an idea but don't know how to prompt an AI to generate the *initial* working codebase ("It doesn't run").
-2.  **The "Prototype" Trap:** They have a script that works, but it's fragile, undocumented, and impossible for others to install ("It doesn't ship").
+```
+curriculum/*.md  ──►  VitePress Build  ──►  Static Site (GitHub Pages)
+     (source)           (pipeline)          (student-facing)
+```
 
-### The Solution
-We provide a complete framework for both.
-*   **Phase 1** teaches you the **Agentic Skills** to generate working code from scratch.
-*   **Phase 2 & 3** teach you the **Engineering Discipline** to package, release, and support it.
+- **Students** read the course at [parkwardrr.github.io/weekend-to-release](https://parkwardrr.github.io/weekend-to-release/).
+- **Editors** modify Markdown files in `curriculum/` and submit pull requests.
+- **Maintainers** review PRs, merge to `main`, and deploy with `./tools/deploy.sh`.
 
-> **💡 Quick Start:** Check out the **[2-Page Visual Cheatsheet (AI Edition)](./CHEATSHEET.md)** for the high-level roadmap.
-
----
-
-## 🎯 The Curriculum
+## Curriculum Overview
 
 ### Phase 1: From Blank Page to "It Runs"
-*Learn to wield the agentic stack to generate code that actually works.*
 
-| Module | Topic | Outcome |
+| Module | Topic | File |
 | :--- | :--- | :--- |
-| **[Skill 01](./curriculum/ai_skills/01_the_ai_stack.md)** | **The AI Stack** | Setup your agentic workflow in your preferred environment. |
-| **[Skill 02](./curriculum/ai_skills/02_prompt_engineering.md)** | **The Perfect Spec** | Write prompts that generate working code on the first try. |
-| **[Skill 03](./curriculum/ai_skills/03_agentic_workflow.md)** | **The Build Loop** | The process of iterating from "broken" to "running" code. |
-| **[Skill 04](./curriculum/ai_skills/04_context_management.md)** | **Context Mastery** | Managing heavy files and token limits in large projects. |
-| **[Skill 05](./curriculum/ai_skills/05_debugging_collaboratively.md)** | **AI Debugging** | How to fix bugs without hallucinating more bugs. |
+| Skill 01 | The AI Stack | [`curriculum/ai_skills/01_the_ai_stack.md`](./curriculum/ai_skills/01_the_ai_stack.md) |
+| Skill 02 | The Perfect Spec | [`curriculum/ai_skills/02_prompt_engineering.md`](./curriculum/ai_skills/02_prompt_engineering.md) |
+| Skill 03 | The Build Loop | [`curriculum/ai_skills/03_agentic_workflow.md`](./curriculum/ai_skills/03_agentic_workflow.md) |
+| Skill 04 | Context Mastery | [`curriculum/ai_skills/04_context_management.md`](./curriculum/ai_skills/04_context_management.md) |
+| Skill 05 | AI Debugging | [`curriculum/ai_skills/05_debugging_collaboratively.md`](./curriculum/ai_skills/05_debugging_collaboratively.md) |
 
-### Phase 2: The Idea Filter (What to Build)
-*Before you prompt, you must decide what is worth building.*
+### Phase 2: The Idea Filter
 
-| Module | Topic | Outcome |
+| Module | Topic | File |
 | :--- | :--- | :--- |
-| **[Module A](./curriculum/01_idea_filter.md)** | **The Idea Filter** | Go from "cool demo" to "shippable product brief". |
-| **[Module B](./curriculum/02_mvp_scope.md)** | **The MVP Scope** | Define the smallest installable value and cut everything else. |
+| Module A | The Idea Filter | [`curriculum/01_idea_filter.md`](./curriculum/01_idea_filter.md) |
+| Module B | The MVP Scope | [`curriculum/02_mvp_scope.md`](./curriculum/02_mvp_scope.md) |
 
 ### Phase 3: From "It Runs" to "It Ships"
-*The release engineering that turns a project into a product.*
 
-| Module | Topic | Outcome |
+| Module | Topic | File |
 | :--- | :--- | :--- |
-| **[Module C](./curriculum/03_distribution.md)** | **Distribution & Install** | Create a foolproof install path anyone can follow. |
-| **[Module D](./curriculum/04_config_safety.md)** | **Config & Safety** | Handle user settings and secrets without exposing them. |
-| **[Module E](./curriculum/05_testing.md)** | **Testing Strategy** | Verify your release without writing a massive test suite. |
-| **[Module F](./curriculum/06_versioning.md)** | **Versioning & Upgrades** | Semantic versioning, changelogs, and upgrade paths. |
-| **[Module G](./curriculum/07_support_loop.md)** | **Support Loop** | Manage issues and feedback without burnout. |
-| **[Module H](./curriculum/08_launch_feedback.md)** | **Launch & Roadmap** | Ship, gather feedback, and plan the next version. |
+| Module C | Distribution & Install | [`curriculum/03_distribution.md`](./curriculum/03_distribution.md) |
+| Module D | Config & Safety | [`curriculum/04_config_safety.md`](./curriculum/04_config_safety.md) |
+| Module E | Testing Strategy | [`curriculum/05_testing.md`](./curriculum/05_testing.md) |
+| Module F | Versioning & Upgrades | [`curriculum/06_versioning.md`](./curriculum/06_versioning.md) |
+| Module G | Support Loop | [`curriculum/07_support_loop.md`](./curriculum/07_support_loop.md) |
+| Module H | Launch & Roadmap | [`curriculum/08_launch_feedback.md`](./curriculum/08_launch_feedback.md) |
 
----
+## For Editors & Contributors
 
-## 🛠️ The Agentic Stack
+### Quick Start
 
-We build using the tools that fit *your* workflow (OS Agnostic):
+```bash
+# Clone and install
+git clone https://github.com/ParkWardRR/weekend-to-release.git
+cd weekend-to-release
+npm install
 
-- **The Brains:** Your preferred LLM (Claude, Gemini, GPT-4).
-- **The Hands:** Your Terminal Agent (Antigravity, claude.code, or custom tools).
-- **The Eyes:** Your Editor (VS Code, Cursor, Zed).
-- **The Deployment:** Your Ops Pipeline (GitHub Actions, Vercel, Netlify).
+# Start local dev server (hot-reload)
+npm run docs:dev
+# → http://localhost:5173/weekend-to-release/
+```
 
-## 🌐 Web Generation Pipeline
-This curriculum is built into a high-performance static website (VitePress). We use a local build pipeline to allow hosting on GitHub Pages without using paid Actions runner minutes.
+### Writing Guidelines
 
-- **Read Online:** [https://parkwardrr.github.io/weekend-to-release/](https://parkwardrr.github.io/weekend-to-release/)
-- **Pipeline Docs:** [Read docs/PIPELINE.md](./docs/PIPELINE.md)
-- **Deploy:** `./tools/deploy.sh` (Builds locally -> Pushes to `gh-pages`)
+- **Audience:** ELI-15 (Explain Like I'm 15). Short sentences, define jargon, prefer examples.
+- **Structure:** Every module follows "What You'll Build" → "Why It Matters" → "Do This Now" → Checklist.
+- **Diagrams:** Use Mermaid (`flowchart TD` or `flowchart LR`), 6-12 nodes per diagram.
+- **Tone:** Practical, direct, zero fluff.
 
-## 👥 Who Is This For?
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the full guide.
 
-- **The AI-Curious Builder:** You know how to chat with ChatGPT, but struggle to build *systems*.
-- **The Non-SWE Founder:** You want to leverage AI to become a 10x engineer without 10 years of experience.
-- **The Pro:** You want to learn the specific patterns of *Agentic* software development on any platform.
+### Deploying
 
-## 📜 License
+We use a local build-and-deploy pipeline (no paid GitHub Actions minutes).
 
-This project is licensed under the [Blue Oak Model License 1.0.0](https://blueoakcouncil.org/license/1.0.0).
+```bash
+./tools/deploy.sh
+```
+
+This builds the VitePress site locally and force-pushes the output to the `gh-pages` branch.
+
+See [`docs/PIPELINE.md`](./docs/PIPELINE.md) for the full pipeline documentation.
+
+### Tech Stack
+
+- **Content:** Markdown + Mermaid diagrams
+- **Generator:** [VitePress](https://vitepress.dev) (Vue-powered SSG)
+- **Hosting:** GitHub Pages (`gh-pages` branch)
+- **License:** [Blue Oak Model License 1.0.0](https://blueoakcouncil.org/license/1.0.0)
 
 ---
 
 <div align="center">
-<sub>Built with ❤️ for builders who ship (with a little help from silicon friends).</sub>
+<sub>Built for builders who ship.</sub>
 </div>
