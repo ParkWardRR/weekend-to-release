@@ -80,6 +80,13 @@ We build using the tools that fit *your* workflow (OS Agnostic):
 - **The Eyes:** Your Editor (VS Code, Cursor, Zed).
 - **The Deployment:** Your Ops Pipeline (GitHub Actions, Vercel, Netlify).
 
+## 🌐 Web Generation Pipeline (Local CI/CD)
+This curriculum can be built into a high-performance static website (VitePress) for better reading.
+
+- **Pipeline Docs:** [Read docs/PIPELINE.md](./docs/PIPELINE.md)
+- **Run Locally:** `./tools/pipeline.sh`
+- **Output:** A deployable `dist` folder you can host anywhere (Netlify, Vercel, S3) without paying for GitHub Enterprise.
+
 ## 👥 Who Is This For?
 
 - **The AI-Curious Builder:** You know how to chat with ChatGPT, but struggle to build *systems*.
