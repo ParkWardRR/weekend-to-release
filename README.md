@@ -10,6 +10,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg?style=flat-square)](http://makeapullrequest.com)
 [![Mermaid JS](https://img.shields.io/badge/Diagrams-Mermaid_JS-ff69b4.svg?style=flat-square)](https://mermaid.js.org/)
 [![Curriculum: 13 Modules](https://img.shields.io/badge/Course-13_Modules-blueviolet.svg?style=flat-square)](./curriculum)
+[![Docs: Localhost](https://img.shields.io/badge/Docs-Running_Locally-success)](http://localhost:5173/weekend-to-release/)
 
 </div>
 
@@ -85,6 +86,7 @@ This curriculum can be built into a high-performance static website (VitePress) 
 
 - **Pipeline Docs:** [Read docs/PIPELINE.md](./docs/PIPELINE.md)
 - **Run Locally:** `./tools/pipeline.sh`
+- **Developing Site:** [http://localhost:5173/weekend-to-release/](http://localhost:5173/weekend-to-release/)
 - **Output:** A deployable `dist` folder you can host anywhere (Netlify, Vercel, S3) without paying for GitHub Enterprise.
 
 ## 👥 Who Is This For?
