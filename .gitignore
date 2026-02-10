@@ -36,3 +36,5 @@ env/
 # Temp
 tmp/
 temp/
+.vitepress/dist
+.vitepress/cache
