@@ -16,11 +16,11 @@ There is *no duplication* of content. The single source of truth is the Markdown
 ### Input -> Processing -> Output
 1.  **Input:** Your edits to `curriculum/*.md` or `README.md`.
 2.  **Processing:** VitePress transforms Markdown -> Vue Components -> Static HTML/JS.
-3.  **Output:** A deployable `dist` folder (static website).
+3.  **Output:** A deployable `dist` folder (static website) or GitHub Pages deployment.
 
-## 2. Setting Up Your Environment (Local CI/CD)
+## 2. Setting Up Your Environment (Local Config)
 
-The user does not use GitHub Actions. We run the pipeline locally.
+We use **Local Scripts** for production deployment to avoid using GitHub Actions minutes.
 
 ### Step 1: Install
 Ensure you have Node.js installed.
@@ -33,34 +33,26 @@ To see your changes live as you edit:
 ```bash
 npm run docs:dev
 ```
-This starts a local server at `http://localhost:5173`. Any change to a `.md` file instantly refreshes the browser.
+This starts a local server at `http://localhost:5173/weekend-to-release/`. Any change to a `.md` file instantly refreshes the browser.
 
-## 3. The Release Pipeline (Production Build)
+## 3. The Release Pipeline (Manual Build & Deploy)
 
-When you are ready to "Ship" the documentation site:
+When you are ready to "Ship" the documentation site to GitHub Pages:
 
-### Run the Pipeline Script
-We have a unified script in `tools/pipeline.sh`.
+### Run the Deploy Script
+We have a unified script in `tools/deploy.sh`.
 ```bash
-./tools/pipeline.sh
+./tools/deploy.sh
 ```
 
 **What this script does:**
-1.  Checks if `node_modules` exists (installs if missing).
-2.  Runs `npm run docs:build`.
-3.  Verifies the build exit code.
-4.  Outputs the location of the static files (`.vitepress/dist`).
+1.  Builds the site locally (`npm run docs:build`).
+2.  Commits the output in `.vitepress/dist` to a temporary git repo.
+3.  Force pushes that folder to the `gh-pages` branch on GitHub.
+4.  GitHub serves that branch as the static site.
 
-### Manual Build Command
-```bash
-npm run docs:build
-```
-
-### Preview the Production Build
-To test exactly what users will see (including 404s and base paths):
-```bash
-npm run docs:preview
-```
+### Verification
+Site available at: [https://ParkWardRR.github.io/weekend-to-release/](https://ParkWardRR.github.io/weekend-to-release/)
 
 ## 4. Instructions for AI Agents
 
@@ -68,13 +60,5 @@ If you are an AI Agent tasked with "Updating the Docs Site", follow this protoco
 
 1.  **Edit the Content:** Modify the specific file in `curriculum/` (e.g., `curriculum/01_idea_filter.md`).
 2.  **Verify the Config:** If you added a *new* file, you MUST update `.vitepress/config.mts` in the `sidebar` section to include a link to the new file.
-3.  **Run the Build:** Execute `./tools/pipeline.sh` to ensure your markdown syntax didn't break the build (e.g., broken frontmatter).
-4.  **Report Success:** Confirm that "Build Success!" was outputted.
-
-## 5. Deployment (Manual / Local)
-
-Since we use Local CI/CD:
-1.  Run the build.
-2.  The output is in `.vitepress/dist`.
-3.  You can zip this folder, rsync it to a server, or drag-and-drop it to a static host (Netlify/Vercel) manually if needed.
-4.  To browse locally, just use `npm run docs:preview`.
+3.  **Run the Build:** Execute `./tools/pipeline.sh` (or `npm run docs:build`) to ensure your markdown syntax didn't break the build.
+4.  **Deploy (If requested):** Run `./tools/deploy.sh`.

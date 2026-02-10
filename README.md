@@ -10,7 +10,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg?style=flat-square)](http://makeapullrequest.com)
 [![Mermaid JS](https://img.shields.io/badge/Diagrams-Mermaid_JS-ff69b4.svg?style=flat-square)](https://mermaid.js.org/)
 [![Curriculum: 13 Modules](https://img.shields.io/badge/Course-13_Modules-blueviolet.svg?style=flat-square)](./curriculum)
-[![Docs: Localhost](https://img.shields.io/badge/Docs-Running_Locally-success)](http://localhost:5173/weekend-to-release/)
+[![Docs: Online](https://img.shields.io/badge/Docs-Read_Online-success)](https://parkwardrr.github.io/weekend-to-release/)
 
 </div>
 
@@ -81,13 +81,12 @@ We build using the tools that fit *your* workflow (OS Agnostic):
 - **The Eyes:** Your Editor (VS Code, Cursor, Zed).
 - **The Deployment:** Your Ops Pipeline (GitHub Actions, Vercel, Netlify).
 
-## 🌐 Web Generation Pipeline (Local CI/CD)
-This curriculum can be built into a high-performance static website (VitePress) for better reading.
+## 🌐 Web Generation Pipeline
+This curriculum is built into a high-performance static website (VitePress). We use a local build pipeline to allow hosting on GitHub Pages without using paid Actions runner minutes.
 
+- **Read Online:** [https://parkwardrr.github.io/weekend-to-release/](https://parkwardrr.github.io/weekend-to-release/)
 - **Pipeline Docs:** [Read docs/PIPELINE.md](./docs/PIPELINE.md)
-- **Run Locally:** `./tools/pipeline.sh`
-- **Developing Site:** [http://localhost:5173/weekend-to-release/](http://localhost:5173/weekend-to-release/)
-- **Output:** A deployable `dist` folder you can host anywhere (Netlify, Vercel, S3) without paying for GitHub Enterprise.
+- **Deploy:** `./tools/deploy.sh` (Builds locally -> Pushes to `gh-pages`)
 
 ## 👥 Who Is This For?
 
