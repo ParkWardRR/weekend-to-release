@@ -1,5 +1,10 @@
 <div align="center">
 
+> ## **[Start the Course](https://parkwardrr.github.io/weekend-to-release/)**
+> **Here to learn? Go straight to the course.** Everything below is for editors and contributors.
+
+---
+
 # Weekend-to-Release (Agentic Edition)
 
 ### From Idea to "It Runs" to "It Ships"
@@ -9,15 +14,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg?style=flat-square)](http://makeapullrequest.com)
 [![Diagrams: Mermaid](https://img.shields.io/badge/Diagrams-Mermaid_JS-ff69b4.svg?style=flat-square)](https://mermaid.js.org/)
 [![Curriculum: 13 Modules](https://img.shields.io/badge/Course-13_Modules-blueviolet.svg?style=flat-square)](./curriculum)
-
----
-
-### **[Read the Course Online](https://parkwardrr.github.io/weekend-to-release/)**
-
-If you're here to **learn**, head straight to the live site above.
-Everything below is for **editors, contributors, and maintainers** of this curriculum.
-
----
 
 </div>
 
