@@ -588,8 +588,9 @@ for (const contrib of contributors) {
   console.log(`  Generated learn/${contrib.name}/ (${contrib.fileCount} source files)`);
 }
 
-// Generate homepage
-const homepageContent = generateHomepage(contributors);
+// Generate homepage (exclude example/test contributors)
+const realContributors = contributors.filter(c => !c.name.startsWith('ai_example'));
+const homepageContent = generateHomepage(realContributors);
 fs.writeFileSync(INDEX_FILE, homepageContent);
 console.log('Generated index.md');
 
