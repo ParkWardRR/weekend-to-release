@@ -189,36 +189,6 @@ flowchart LR
 <div class="pro-grid">
 
       <div class="pro-card">
-        <a href="/learn/ai_example_1/">
-          <div class="pro-header">
-            <h4>Ai Example 1</h4>
-            <span class="tag tag-orange">Rapid Prototyper</span>
-          </div>
-          <div class="pro-phases"><span class="phase-dot phase-spec" title="Spec">Spec</span><span class="phase-dot phase-build" title="Build">Build</span><span class="phase-dot phase-test" title="Test">Test</span></div>
-          <div class="pro-tools"><span class="tag tag-tool">Python</span></div>
-          <div class="pro-links">
-            <a href="/learn/ai_example_1/course" class="pro-link">Course</a>
-            <a href="/learn/ai_example_1/cheatsheet" class="pro-link">Cheatsheet</a>
-          </div>
-        </a>
-      </div>
-
-      <div class="pro-card">
-        <a href="/learn/ai_example_2/">
-          <div class="pro-header">
-            <h4>Ai Example 2</h4>
-            <span class="tag tag-green">Methodical</span>
-          </div>
-          <div class="pro-phases"><span class="phase-dot phase-spec" title="Spec">Spec</span><span class="phase-dot phase-build" title="Build">Build</span><span class="phase-dot phase-test" title="Test">Test</span><span class="phase-dot phase-ship" title="Ship">Ship</span></div>
-          <div class="pro-tools"><span class="tag tag-tool">npm</span></div>
-          <div class="pro-links">
-            <a href="/learn/ai_example_2/course" class="pro-link">Course</a>
-            <a href="/learn/ai_example_2/cheatsheet" class="pro-link">Cheatsheet</a>
-          </div>
-        </a>
-      </div>
-
-      <div class="pro-card">
         <a href="/learn/alex/">
           <div class="pro-header">
             <h4>Alex</h4>
