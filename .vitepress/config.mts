@@ -16,7 +16,7 @@ export default defineConfig({
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Cheatsheet', link: '/CHEATSHEET' },
+            { text: 'Cheatsheet', link: '/cheatsheet' },
             { text: 'Start Learning', link: '/curriculum/ai_skills/01_the_ai_stack' },
         ],
 
