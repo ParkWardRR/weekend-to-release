@@ -1,80 +1,83 @@
 ---
-layout: home
-
-hero:
-  name: Weekend-to-Release
-  text: Build with AI. Ship for Real.
-  tagline: The complete course for turning a weekend idea into a versioned, installable product — using AI agents as your co-pilot.
-  actions:
-    - theme: brand
-      text: Start the Course
-      link: /curriculum/ai_skills/01_the_ai_stack
-    - theme: alt
-      text: View the Cheatsheet
-      link: /cheatsheet
-  image:
-    src: /images/hero_rocket.png
-    alt: Weekend to Release Hero
-
-features:
-  - icon: "🧠"
-    title: "Phase 1: From Blank Page to \"It Runs\""
-    details: Learn to wield AI agents to generate working code from scratch. Master prompt engineering, agentic workflows, context management, and collaborative debugging.
-    link: /curriculum/ai_skills/01_the_ai_stack
-  - icon: "🎯"
-    title: "Phase 2: What to Build"
-    details: Before you prompt, decide what's worth building. Filter ideas, scope an MVP, and cut everything that doesn't serve the user.
-    link: /curriculum/01_idea_filter
-  - icon: "🚀"
-    title: "Phase 3: From \"It Runs\" to \"It Ships\""
-    details: The release engineering that turns a project into a product. Distribution, config, testing, versioning, support, and launch.
-    link: /curriculum/03_distribution
+layout: doc
+title: Dashboard
+aside: false
 ---
 
-## Who This Is For
+# Your AI Dashboard
 
-- **The AI-Curious Builder** — You can chat with an LLM, but you want to build *systems* that other people can install and use.
-- **The Non-SWE Founder** — You want to leverage AI to ship real products without a decade of engineering experience.
-- **The Pro** — You want to learn the specific patterns of agentic software development.
-
-## The Curriculum
-
-### Phase 1: From Blank Page to "It Runs"
-
-*Learn to wield the agentic stack to generate code that actually works.*
-
-| Module | Topic | What You'll Learn |
-| :--- | :--- | :--- |
-| Skill 01 | [The AI Stack](/curriculum/ai_skills/01_the_ai_stack) | Set up your agentic workflow — the brains, the hands, the eyes. |
-| Skill 02 | [The Perfect Spec](/curriculum/ai_skills/02_prompt_engineering) | Write prompts that generate working code on the first try. |
-| Skill 03 | [The Build Loop](/curriculum/ai_skills/03_agentic_workflow) | The Red/Green/Review process for iterating from broken to running. |
-| Skill 04 | [Context Mastery](/curriculum/ai_skills/04_context_management) | Manage heavy files and token limits in large projects. |
-| Skill 05 | [AI Debugging](/curriculum/ai_skills/05_debugging_collaboratively) | Fix bugs without hallucinating more bugs. |
-
-### Phase 2: The Idea Filter
-
-*Before you prompt, decide what is worth building.*
-
-| Module | Topic | What You'll Learn |
-| :--- | :--- | :--- |
-| Module A | [The Idea Filter](/curriculum/01_idea_filter) | Go from "cool demo" to shippable product brief. |
-| Module B | [The MVP Scope](/curriculum/02_mvp_scope) | Define the smallest installable value and cut everything else. |
-
-### Phase 3: From "It Runs" to "It Ships"
-
-*The release engineering that turns a project into a product.*
-
-| Module | Topic | What You'll Learn |
-| :--- | :--- | :--- |
-| Module C | [Distribution & Install](/curriculum/03_distribution) | Create a foolproof install path anyone can follow. |
-| Module D | [Config & Safety](/curriculum/04_config_safety) | Handle user settings and secrets without exposing them. |
-| Module E | [Testing Strategy](/curriculum/05_testing) | Verify your release without writing a massive test suite. |
-| Module F | [Versioning & Upgrades](/curriculum/06_versioning) | Semantic versioning, changelogs, and upgrade paths. |
-| Module G | [Support Loop](/curriculum/07_support_loop) | Manage issues and feedback without burnout. |
-| Module H | [Launch & Roadmap](/curriculum/08_launch_feedback) | Ship, gather feedback, and plan the next version. |
-
----
-
-<div style="text-align: center; opacity: 0.7; font-size: 0.9em; margin-top: 2em;">
-Licensed under the <a href="https://blueoakcouncil.org/license/1.0.0">Blue Oak Model License 1.0.0</a>.
+<div class="dashboard-header">
+    <div class="stat">
+        <span class="label">Maturity Score</span>
+        <span class="value developing">Developing</span>
+    </div>
+    <div class="stat">
+        <span class="label">Iterations</span>
+        <span class="value">2</span>
+    </div>
+    <div class="stat">
+        <span class="label">Last Update</span>
+        <span class="value small">2/10/2026, 6:40:40 PM</span>
+    </div>
 </div>
+
+::: tip
+This dashboard is dynamically generated from **`journey/workflow.md`**. Edit that file to update your analysis.
+:::
+
+## 🔍 Visualizing Your Workflow
+
+<div class="comparison-grid">
+    <div class="col messy">
+        <h3>Your Raw Context</h3>
+        <div class="content markdown-body">
+# My Chaotic Coding Style
+
+I usually start by asking **ChatGPT** to write me a python script to pull data from an API. 
+
+I copy paste it into **VS Code**. If it doesn't work, I copy the error message back to ChatGPT and ask it to fix it. I keep doing this until it works. 
+
+Sometimes I use **GitHub Copilot** to help me write functions. 
+
+I don't really use version control until the end when I just commit everything. 
+
+I debug with print statements. I never write tests first.
+        </div>
+        <a href="/journey/workflow.md" class="edit-link">✏️ Edit Context</a>
+    </div>
+    <div class="col clean">
+        <h3>The Optimized Pipeline</h3>
+        <div class="content">
+            <h4>Detected Stack</h4>
+            <ul>
+                <li>ChatGPT</li><li>GitHub Copilot</li>
+            </ul>
+             <h4>Critical Upgrades Needed</h4>
+            <div class="cards-container">
+                
+    <div class="card suggestion">
+        <div class="icon">⚠️</div>
+        <div class="details">
+            <h4>Missing Specs</h4>
+            <p>You jump straight to code. Agents hallucinate less when you give them a roadmap first.</p>
+            <a href="/curriculum/ai_skills/02_prompt_engineering">Fix this →</a>
+        </div>
+    </div>
+    
+    <div class="card suggestion">
+        <div class="icon">⚠️</div>
+        <div class="details">
+            <h4>The Copy-Paste Loop</h4>
+            <p>Stop pasting errors manually. Use a terminal-integrated agent or CLI tool.</p>
+            <a href="/curriculum/ai_skills/05_debugging_collaboratively">Fix this →</a>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        <a href="/journey/my_cheatsheet.md" class="action-btn">View Full Cheatsheet →</a>
+        <a href="/curriculum/ai_skills/01_the_ai_stack" class="action-btn secondary">Start Course →</a>
+
+    </div>
+</div>
+

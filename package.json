@@ -9,7 +9,9 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "analyze:workflow": "node tools/analyze_workflow.js",
+    "journey": "node tools/analyze_workflow.js"
   },
   "repository": {
     "type": "git",
