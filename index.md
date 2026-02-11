@@ -11,7 +11,7 @@ hero:
       link: /curriculum/ai_skills/01_the_ai_stack
     - theme: alt
       text: View the Cheatsheet
-      link: /CHEATSHEET
+      link: /cheatsheet
 
 features:
   - icon: "🧠"
