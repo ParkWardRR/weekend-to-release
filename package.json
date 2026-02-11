@@ -10,8 +10,7 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "analyze:workflow": "node tools/analyze_workflow.js",
-    "journey": "node tools/analyze_workflow.js"
+    "generate:curriculum": "node tools/generate_curriculum.js"
   },
   "repository": {
     "type": "git",
