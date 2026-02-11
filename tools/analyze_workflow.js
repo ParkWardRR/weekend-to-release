@@ -178,7 +178,9 @@ This dashboard is dynamically generated from **\`journey/workflow.md\`**. Edit t
     <div class="col messy">
         <h3>Your Raw Context</h3>
         <div class="content markdown-body">
+
 ${cleanRaw}
+
         </div>
         <a href="/journey/workflow.md" class="edit-link">✏️ Edit Context</a>
     </div>

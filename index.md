@@ -31,6 +31,7 @@ This dashboard is dynamically generated from **`journey/workflow.md`**. Edit tha
     <div class="col messy">
         <h3>Your Raw Context</h3>
         <div class="content markdown-body">
+
 # My Chaotic Coding Style
 
 I usually start by asking **ChatGPT** to write me a python script to pull data from an API. 
@@ -42,6 +43,7 @@ Sometimes I use **GitHub Copilot** to help me write functions.
 I don't really use version control until the end when I just commit everything. 
 
 I debug with print statements. I never write tests first.
+
         </div>
         <a href="/journey/workflow.md" class="edit-link">✏️ Edit Context</a>
     </div>
