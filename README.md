@@ -1,3 +1,17 @@
+## For Students
+
+**Start learning now:** [parkwardrr.github.io/weekend-to-release](https://parkwardrr.github.io/weekend-to-release/)
+
+### Table of Contents
+
+- [What You'll Learn](#what-youll-learn)
+- [Learn from the Pros](#learn-from-the-pros)
+- [For Contributors (Pros)](#for-contributors-pros)
+- [Building & Publishing](#building--publishing)
+- [Project Structure](#project-structure)
+
+---
+
 <div align="center">
 
 ![Weekend-to-Release](public/screenshots/hero.png)
@@ -21,12 +35,6 @@
 Learn the AI-led Product Development Life Cycle (PDLC) from experienced developers who share their real workflows, tips, and hard-won knowledge.
 
 </div>
-
----
-
-## For Students
-
-**Start learning now:** [parkwardrr.github.io/weekend-to-release](https://parkwardrr.github.io/weekend-to-release/)
 
 The site walks you through the full AI-led PDLC — from blank page to public release:
 
