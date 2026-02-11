@@ -67,8 +67,8 @@ export default defineConfig({
     rewrites: {
         'CHEATSHEET.md': 'cheatsheet.md',
         'curriculum/:path*': 'curriculum/:path*',
-        'courses/:name/index.md': 'courses/:name/index.md',
-        'courses/:name/:path*': 'courses/:name/:path*',
+        'learn/:name/index.md': 'learn/:name/index.md',
+        'learn/:name/:path*': 'learn/:name/:path*',
     },
     ignoreDeadLinks: true
 })
