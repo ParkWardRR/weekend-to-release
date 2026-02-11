@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
     title: "Weekend-to-Release",
-    description: "The complete course for building with AI agents and shipping real products.",
+    description: "Learn from the pros. Messy notes in, structured courses out.",
     base: "/weekend-to-release/",
     srcExclude: [
         'README.md',
@@ -12,16 +12,18 @@ export default defineConfig({
         'LICENSE.md',
         'SECURITY.md',
         'docs/**',
+        'contributors/**',
     ],
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Cheatsheet', link: '/cheatsheet' },
-            { text: 'Start Learning', link: '/curriculum/ai_skills/01_the_ai_stack' },
+            { text: 'Learn from Pros', link: '/courses/' },
+            { text: 'Primers', link: '/curriculum/ai_skills/01_the_ai_stack' },
         ],
 
         sidebar: {
-            '/': [
+            '/curriculum/': [
                 {
                     text: 'Phase 1: From Blank Page to "It Runs"',
                     items: [
@@ -50,7 +52,7 @@ export default defineConfig({
                         { text: 'Launch & Roadmap', link: '/curriculum/08_launch_feedback' },
                     ]
                 }
-            ]
+            ],
         },
 
         socialLinks: [
@@ -64,7 +66,9 @@ export default defineConfig({
     },
     rewrites: {
         'CHEATSHEET.md': 'cheatsheet.md',
-        'curriculum/:path*': 'curriculum/:path*'
+        'curriculum/:path*': 'curriculum/:path*',
+        'courses/:name/index.md': 'courses/:name/index.md',
+        'courses/:name/:path*': 'courses/:name/:path*',
     },
     ignoreDeadLinks: true
 })

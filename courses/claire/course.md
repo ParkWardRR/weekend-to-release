@@ -1,0 +1,20 @@
+---
+title: "Claire's Course"
+---
+
+# Claire's Course
+
+What follows is Claire's knowledge, organized for learning.
+
+---
+
+## Claire's Methodical Workflow
+
+I start by writing a spec in Jira. Then I move to VS Code.
+
+I write a failing test first (Red).
+Then I implement the minimal code to pass (Green).
+Then I refactor (Blue).
+
+I use Jest for testing and specific linters like ESLint.
+I commit frequently with conventional commits.
