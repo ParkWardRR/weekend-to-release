@@ -16,7 +16,13 @@
     "url": "git+https://github.com/ParkWardRR/weekend-to-release.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "ParkWardRR",
+  "contributors": [
+    {
+      "name": "Antigravity",
+      "url": "https://deepmind.google/technologies/gemini/"
+    }
+  ],
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
