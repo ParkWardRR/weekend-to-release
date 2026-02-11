@@ -1,9 +1,11 @@
 
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(
+  defineConfig({
     title: "Weekend-to-Release",
-    description: "Learn from the pros. Messy notes in, structured courses out.",
+    description: "Your guide to building and shipping with AI. From blank page to public release.",
     base: "/weekend-to-release/",
     srcExclude: [
         'README.md',
@@ -18,8 +20,7 @@ export default defineConfig({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Cheatsheet', link: '/cheatsheet' },
-            { text: 'Learn from Pros', link: '/#pros' },
-            { text: 'Primers', link: '/curriculum/ai_skills/01_the_ai_stack' },
+            { text: 'Start Learning', link: '/curriculum/ai_skills/01_the_ai_stack' },
         ],
 
         sidebar: {
@@ -53,6 +54,16 @@ export default defineConfig({
                     ]
                 }
             ],
+            '/learn/': [
+                {
+                    text: 'Learn from the Pros',
+                    items: [
+                        { text: 'Alex', link: '/learn/alex/' },
+                        { text: 'Antigravity', link: '/learn/antigravity/' },
+                        { text: 'Claire', link: '/learn/claire/' },
+                    ]
+                }
+            ],
         },
 
         socialLinks: [
@@ -71,4 +82,5 @@ export default defineConfig({
         'learn/:name/:path*': 'learn/:name/:path*',
     },
     ignoreDeadLinks: true
-})
+  })
+)
