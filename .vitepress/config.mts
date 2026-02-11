@@ -18,7 +18,7 @@ export default defineConfig({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Cheatsheet', link: '/cheatsheet' },
-            { text: 'Learn from Pros', link: '/courses/' },
+            { text: 'Learn from Pros', link: '/#pros' },
             { text: 'Primers', link: '/curriculum/ai_skills/01_the_ai_stack' },
         ],
 

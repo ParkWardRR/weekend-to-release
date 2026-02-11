@@ -377,11 +377,6 @@ for (const contrib of contributors) {
   console.log(`  Generated courses/${contrib.name}/ (${contrib.fileCount} source files)`);
 }
 
-// Generate courses/index.md (directory listing)
-const coursesIndexContent = generateCoursesIndex(contributors);
-fs.writeFileSync(path.join(COURSES_DIR, 'index.md'), coursesIndexContent);
-console.log('Generated courses/index.md');
-
 // Generate homepage
 const homepageContent = generateHomepage(contributors);
 fs.writeFileSync(INDEX_FILE, homepageContent);
