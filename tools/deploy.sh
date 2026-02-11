@@ -4,11 +4,11 @@ set -e
 
 # 1. Build
 echo "Building docs..."
-npm run docs:build
+npm run build
 
 # 2. Deploy
 echo "Deploying to gh-pages..."
-cd .vitepress/dist
+cd dist
 
 git init
 git add -A
