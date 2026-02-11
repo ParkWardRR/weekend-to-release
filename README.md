@@ -1,5 +1,7 @@
 # Weekend-to-Release
 
+👉 [**START LEARNING NOW (LIVE SITE)**](https://ParkWardRR.github.io/weekend-to-release/)
+
 <div align="center">
 
 <img src="./src/assets/hero_starlight.png" width="300" alt="Weekend-to-Release Hero">
@@ -7,7 +9,6 @@
 ### Build and Ship with AI
 **A step-by-step guide to going from a blank page to a public release, using AI agents as your development team.**
 
-👉 [**START LEARNING NOW (LIVE SITE)**](https://ParkWardRR.github.io/weekend-to-release/)
 
 </div>
 
