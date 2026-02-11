@@ -38,8 +38,6 @@ curriculum/*.md  ──►  VitePress Build  ──►  Static Site (GitHub Page
 
 ## Curriculum Overview
 
-![Phase 1 AI Brain](/weekend-to-release/images/phase_1_brain.png)
-
 ### Phase 1: From Blank Page to "It Runs"
 
 | Module | Topic | File |
@@ -50,16 +48,12 @@ curriculum/*.md  ──►  VitePress Build  ──►  Static Site (GitHub Page
 | Skill 04 | Context Mastery | [`curriculum/ai_skills/04_context_management.md`](./curriculum/ai_skills/04_context_management.md) |
 | Skill 05 | AI Debugging | [`curriculum/ai_skills/05_debugging_collaboratively.md`](./curriculum/ai_skills/05_debugging_collaboratively.md) |
 
-![Phase 2 Filter](/weekend-to-release/images/phase_2_filter.png)
-
 ### Phase 2: The Idea Filter
 
 | Module | Topic | File |
 | :--- | :--- | :--- |
 | Module A | The Idea Filter | [`curriculum/01_idea_filter.md`](./curriculum/01_idea_filter.md) |
 | Module B | The MVP Scope | [`curriculum/02_mvp_scope.md`](./curriculum/02_mvp_scope.md) |
-
-![Phase 3 Ship](/weekend-to-release/images/phase_3_ship.png)
 
 ### Phase 3: From "It Runs" to "It Ships"
 

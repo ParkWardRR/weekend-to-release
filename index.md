@@ -41,8 +41,6 @@ features:
 
 ### Phase 1: From Blank Page to "It Runs"
 
-![Phase 1 AI Brain](/images/phase_1_brain.png)
-
 *Learn to wield the agentic stack to generate code that actually works.*
 
 | Module | Topic | What You'll Learn |
@@ -55,8 +53,6 @@ features:
 
 ### Phase 2: The Idea Filter
 
-![Phase 2 Filter](/images/phase_2_filter.png)
-
 *Before you prompt, decide what is worth building.*
 
 | Module | Topic | What You'll Learn |
@@ -65,8 +61,6 @@ features:
 | Module B | [The MVP Scope](/curriculum/02_mvp_scope) | Define the smallest installable value and cut everything else. |
 
 ### Phase 3: From "It Runs" to "It Ships"
-
-![Phase 3 Ship](/images/phase_3_ship.png)
 
 *The release engineering that turns a project into a product.*
 
