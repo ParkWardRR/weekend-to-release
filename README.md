@@ -1,63 +1,51 @@
-# Weekend-to-Release: The Self-Optimizing Agentic Pipeline
+# Weekend-to-Release
 
-> **Don't just learn AI. Transform your messy creative process into a shipping machine.**
+**Start here:** [parkwardrr.github.io/weekend-to-release](https://parkwardrr.github.io/weekend-to-release/)
 
-This project is not just a course—it is a live, agentic environment that analyzes *your specific* workflow and builds a custom release pipeline around it.
+A practical guide to building and shipping with AI agents. Learn from experienced developers who share their real workflows, tips, and hard-won knowledge.
 
-## 🚀 The Philosophy: Chaos to Release
+---
 
-We believe that human creativity is messy (`journey/workflow.md`). We believe that software delivery should be boring and reliable (`my_cheatsheet.md`).
+## For Contributors (Pros)
 
-This tool bridges the gap.
+Share what you know. Write messy — the pipeline handles formatting.
 
-1.  **Input:** You dump your raw, chaotic, stream-of-consciousness coding style into `journey/workflow.md`.
-2.  **Analysis:** The system (`npm run analyze:workflow`) reads your "Chaos Context".
-3.  **Output:** It generates a personalized **Dashboard** (`index.md`) and **Cheatsheet**, identifying exactly which agentic skills you need to learn to ship.
+1. Create a folder: `contributors/your-name/`
+2. Drop any `.md` files — tips, workflows, war stories, whatever
+3. Run `npm run generate:curriculum`
+4. Review the generated output in `learn/your-name/`
+5. Open a PR
 
-## 🛠️ How to Use This
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
-**1. Clone & Install**
+---
+
+## Building & Publishing the Site
+
+### Setup
+
 ```bash
 git clone https://github.com/ParkWardRR/weekend-to-release.git
 cd weekend-to-release
 npm install
 ```
 
-**2. Define Your Chaos**
-Open `journey/workflow.md` and write about how you code. Be honest.
-> "I copy paste errors."
-> "I never write tests."
-> "I ask GPT-4 to write my entire backend."
+### Generate + Dev Server
 
-**3. Run the Analyzer**
 ```bash
-npm run analyze:workflow
+npm run generate:curriculum    # turns contributor notes into structured pages
+npm run docs:dev               # localhost:5173/weekend-to-release/
 ```
 
-**4. View Your Dashboard**
+### Deploy to GitHub Pages
+
 ```bash
-npm run docs:dev
+npm run docs:build
+bash tools/deploy.sh
 ```
-Go to `http://localhost:5173`. You will see your personalized breakdown.
 
-## 📚 The Curriculum (On Demand)
-
-The curriculum modules are now resources that you pull *when you need them*, tailored to your identified gaps.
-
-- **Phase 1: The Build Loop** (For the copy-pasters)
-- **Phase 2: The Idea Filter** (For the excited starters)
-- **Phase 3: The Release Rocket** (For the non-shippers)
-
-## 📦 For Contributors
-
-This project uses `VitePress` for documentation and simple Node scripts for the analysis engine.
-
-**Build & Deploy:**
-```bash
-./tools/deploy.sh
-```
+See [docs/PIPELINE.md](./docs/PIPELINE.md) for the full pipeline reference.
 
 ---
-<div align="center">
-Built for builders who ship.
-</div>
+
+Licensed under [Blue Oak Model License 1.0.0](./LICENSE.md).

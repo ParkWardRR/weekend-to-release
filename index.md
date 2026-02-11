@@ -33,37 +33,37 @@ features:
 <div class="module-grid">
 
       <div class="module-card">
-        <a href="/courses/ai_example_1/">
+        <a href="/learn/ai_example_1/">
           <h4>Ai Example 1</h4>
-          <p>1 note &middot; <a href="/courses/ai_example_1/course">Course</a> &middot; <a href="/courses/ai_example_1/cheatsheet">Cheatsheet</a></p>
+          <p>1 note &middot; <a href="/learn/ai_example_1/course">Course</a> &middot; <a href="/learn/ai_example_1/cheatsheet">Cheatsheet</a></p>
         </a>
       </div>
 
       <div class="module-card">
-        <a href="/courses/ai_example_2/">
+        <a href="/learn/ai_example_2/">
           <h4>Ai Example 2</h4>
-          <p>1 note &middot; <a href="/courses/ai_example_2/course">Course</a> &middot; <a href="/courses/ai_example_2/cheatsheet">Cheatsheet</a></p>
+          <p>1 note &middot; <a href="/learn/ai_example_2/course">Course</a> &middot; <a href="/learn/ai_example_2/cheatsheet">Cheatsheet</a></p>
         </a>
       </div>
 
       <div class="module-card">
-        <a href="/courses/alex/">
+        <a href="/learn/alex/">
           <h4>Alex</h4>
-          <p>1 note &middot; <a href="/courses/alex/course">Course</a> &middot; <a href="/courses/alex/cheatsheet">Cheatsheet</a></p>
+          <p>1 note &middot; <a href="/learn/alex/course">Course</a> &middot; <a href="/learn/alex/cheatsheet">Cheatsheet</a></p>
         </a>
       </div>
 
       <div class="module-card">
-        <a href="/courses/antigravity/">
+        <a href="/learn/antigravity/">
           <h4>Antigravity</h4>
-          <p>1 note &middot; <a href="/courses/antigravity/course">Course</a> &middot; <a href="/courses/antigravity/cheatsheet">Cheatsheet</a></p>
+          <p>1 note &middot; <a href="/learn/antigravity/course">Course</a> &middot; <a href="/learn/antigravity/cheatsheet">Cheatsheet</a></p>
         </a>
       </div>
 
       <div class="module-card">
-        <a href="/courses/claire/">
+        <a href="/learn/claire/">
           <h4>Claire</h4>
-          <p>1 note &middot; <a href="/courses/claire/course">Course</a> &middot; <a href="/courses/claire/cheatsheet">Cheatsheet</a></p>
+          <p>1 note &middot; <a href="/learn/claire/course">Course</a> &middot; <a href="/learn/claire/cheatsheet">Cheatsheet</a></p>
         </a>
       </div>
 </div>

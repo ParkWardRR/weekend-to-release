@@ -8,15 +8,15 @@
 
 ## How It Works
 
-Pros dump messy `.md` files into `contributors/their-name/`. A Node.js script turns those into structured per-contributor courses. VitePress builds the final site.
+Pros dump messy `.md` files into `contributors/their-name/`. A Node.js script turns those into structured per-contributor pages. VitePress builds the final site.
 
 ```
-contributors/<name>/*.md   ──►   generate_curriculum.js   ──►   courses/<name>/
+contributors/<name>/*.md   ──►   generate_curriculum.js   ──►   learn/<name>/
                                                                   ├── index.md
                                                                   ├── course.md
                                                                   └── cheatsheet.md
 
-courses/**                 ──►   VitePress Build           ──►   GitHub Pages
+learn/**                   ──►   VitePress Build           ──►   GitHub Pages
 curriculum/**                    (npm run docs:build)
 index.md
 CHEATSHEET.md
@@ -24,9 +24,9 @@ CHEATSHEET.md
 
 ### Two-Step Process
 
-**Step 1 — Generate:** `npm run generate:curriculum` reads raw contributor notes and outputs structured course files.
+**Step 1 — Generate:** `npm run generate:curriculum` reads raw contributor notes and outputs structured pages.
 
-**Step 2 — Clean:** A human or AI reviews the generated output in `courses/` and polishes it before deploying.
+**Step 2 — Clean:** A human or AI reviews the generated output in `learn/` and polishes it before deploying.
 
 ## What Gets Published
 
@@ -34,9 +34,9 @@ CHEATSHEET.md
 | :--- | :--- |
 | `index.md` | Homepage (`/`) |
 | `CHEATSHEET.md` | `/cheatsheet` |
-| `courses/<name>/index.md` | `/courses/<name>/` |
-| `courses/<name>/course.md` | `/courses/<name>/course` |
-| `courses/<name>/cheatsheet.md` | `/courses/<name>/cheatsheet` |
+| `learn/<name>/index.md` | `/learn/<name>/` |
+| `learn/<name>/course.md` | `/learn/<name>/course` |
+| `learn/<name>/cheatsheet.md` | `/learn/<name>/cheatsheet` |
 | `curriculum/ai_skills/*.md` | `/curriculum/ai_skills/*` (primers) |
 | `curriculum/*.md` | `/curriculum/*` (primers) |
 
@@ -52,7 +52,7 @@ CHEATSHEET.md
 
 ```bash
 npm install
-npm run generate:curriculum   # Generate courses from contributor notes
+npm run generate:curriculum   # Generate pages from contributor notes
 npm run docs:dev              # Dev server at http://localhost:5173/weekend-to-release/
 ```
 

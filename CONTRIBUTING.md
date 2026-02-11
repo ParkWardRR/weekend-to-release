@@ -8,7 +8,7 @@
 1. Create a folder: `contributors/your-name/`
 2. Drop any `.md` files with your thoughts, tips, workflows, war stories, whatever
 3. Run `npm run generate:curriculum`
-4. Review the generated output in `courses/your-name/`
+4. Review the generated output in `learn/your-name/`
 5. Polish if needed, then open a PR
 
 ### What to write about

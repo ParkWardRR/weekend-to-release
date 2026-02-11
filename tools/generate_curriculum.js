@@ -3,7 +3,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const CONTRIBUTORS_DIR = path.join(ROOT, 'contributors');
-const COURSES_DIR = path.join(ROOT, 'courses');
+const LEARN_DIR = path.join(ROOT, 'learn');
 const INDEX_FILE = path.join(ROOT, 'index.md');
 
 // --- Helpers ---
@@ -198,44 +198,14 @@ ${codeSection}
 `;
 }
 
-function generateCoursesIndex(contributors) {
-  const contribList = contributors.map(c => {
-    const displayName = formatName(c.name);
-    const sections = extractSections(c.files.map(f => f.content).join('\n\n'));
-    const topics = sections.filter(s => s.heading).map(s => s.heading).slice(0, 3);
-    const topicStr = topics.length ? topics.join(', ') : 'General workflow';
-    return `- [${displayName}](./${c.name}/) — ${topicStr}`;
-  }).join('\n');
-
-  return `---
-title: Learn from the Pros
----
-
-# Learn from the Pros
-
-Each contributor shares their real workflow, tips, and hard-won knowledge. The pipeline turns their raw notes into structured learning materials.
-
-## Contributors
-
-${contribList}
-
-## How This Works
-
-1. Experienced developers write messy \`.md\` files in \`contributors/their-name/\`
-2. \`npm run generate:curriculum\` turns those into structured courses
-3. Each contributor gets a curriculum overview, full course, and cheatsheet
-4. A reviewer polishes the output before it goes live
-`;
-}
-
 function generateHomepage(contributors) {
   const contribCards = contributors.map(c => {
     const displayName = formatName(c.name);
     return `
       <div class="module-card">
-        <a href="/courses/${c.name}/">
+        <a href="/learn/${c.name}/">
           <h4>${displayName}</h4>
-          <p>${c.fileCount} note${c.fileCount === 1 ? '' : 's'} &middot; <a href="/courses/${c.name}/course">Course</a> &middot; <a href="/courses/${c.name}/cheatsheet">Cheatsheet</a></p>
+          <p>${c.fileCount} note${c.fileCount === 1 ? '' : 's'} &middot; <a href="/learn/${c.name}/course">Course</a> &middot; <a href="/learn/${c.name}/cheatsheet">Cheatsheet</a></p>
         </a>
       </div>`;
   }).join('\n');
@@ -337,9 +307,9 @@ h2 { border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 0.5rem; margi
 
 // --- Main ---
 
-// Ensure courses/ exists
-if (!fs.existsSync(COURSES_DIR)) {
-  fs.mkdirSync(COURSES_DIR, { recursive: true });
+// Ensure learn/ exists
+if (!fs.existsSync(LEARN_DIR)) {
+  fs.mkdirSync(LEARN_DIR, { recursive: true });
 }
 
 // Scan contributors
@@ -359,7 +329,7 @@ console.log(`Found ${contributors.length} contributors with content.`);
 
 // Generate per-contributor courses
 for (const contrib of contributors) {
-  const outDir = path.join(COURSES_DIR, contrib.name);
+  const outDir = path.join(LEARN_DIR, contrib.name);
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });
   }
@@ -374,7 +344,7 @@ for (const contrib of contributors) {
   fs.writeFileSync(path.join(outDir, 'course.md'), courseContent);
   fs.writeFileSync(path.join(outDir, 'cheatsheet.md'), cheatsheetContent);
 
-  console.log(`  Generated courses/${contrib.name}/ (${contrib.fileCount} source files)`);
+  console.log(`  Generated learn/${contrib.name}/ (${contrib.fileCount} source files)`);
 }
 
 // Generate homepage
