@@ -1,206 +1,314 @@
 const fs = require('fs');
 const path = require('path');
 
-// --- Paths ---
 const ROOT = path.join(__dirname, '..');
 const CONTRIBUTORS_DIR = path.join(ROOT, 'contributors');
-const CURRICULUM_DIR = path.join(ROOT, 'curriculum');
+const COURSES_DIR = path.join(ROOT, 'courses');
 const INDEX_FILE = path.join(ROOT, 'index.md');
 
-// --- Helper: Clean Markdown ---
-const cleanMarkdown = (content) => content.replace(/^---[\s\S]*?---\n/, '').trim();
+// --- Helpers ---
 
-// --- Configuration: SDLC Phases & Modules ---
-const sdlcPhases = {
-  phase1: {
-    title: 'Phase 1: From Blank Page to "It Runs"',
-    modules: [
-      { id: 'ai_skills/01_the_ai_stack', title: 'The AI Stack', tags: ['setup', 'tools'] },
-      { id: 'ai_skills/02_prompt_engineering', title: 'The Perfect Spec', tags: ['planning', 'specs'] },
-      { id: 'ai_skills/03_agentic_workflow', title: 'The Build Loop', tags: ['coding', 'workflow'] },
-      { id: 'ai_skills/04_context_management', title: 'Context Mastery', tags: ['coding', 'context'] },
-      { id: 'ai_skills/05_debugging_collaboratively', title: 'AI Debugging', tags: ['debugging', 'testing'] }
-    ]
-  },
-  phase2: {
-    title: 'Phase 2: What to Build',
-    modules: [
-      { id: '01_idea_filter', title: 'The Idea Filter', tags: ['planning', 'idea'] },
-      { id: '02_mvp_scope', title: 'The MVP Scope', tags: ['planning', 'scope'] }
-    ]
-  },
-  phase3: {
-    title: 'Phase 3: From "It Runs" to "It Ships"',
-    modules: [
-      { id: '03_distribution', title: 'Distribution & Install', tags: ['deployment', 'shipping'] },
-      { id: '04_config_safety', title: 'Config & Safety', tags: ['security', 'config'] },
-      { id: '05_testing', title: 'Testing Strategy', tags: ['testing', 'qa'] },
-      { id: '06_versioning', title: 'Versioning & Upgrades', tags: ['deployment', 'versioning'] },
-      { id: '07_support_loop', title: 'Support Loop', tags: ['maintenance', 'support'] },
-      { id: '08_launch_feedback', title: 'Launch & Roadmap', tags: ['shipping', 'launch'] }
-    ]
+function readContributorFiles(contributorDir) {
+  return fs.readdirSync(contributorDir)
+    .filter(f => f.endsWith('.md') && f !== 'README.md')
+    .sort()
+    .map(f => ({
+      name: f,
+      content: fs.readFileSync(path.join(contributorDir, f), 'utf8')
+    }));
+}
+
+function stripFrontmatter(content) {
+  return content.replace(/^---[\s\S]*?---\n*/, '').trim();
+}
+
+function extractSections(content) {
+  const clean = stripFrontmatter(content);
+  const sections = [];
+  let current = { heading: null, lines: [] };
+
+  for (const line of clean.split('\n')) {
+    const headingMatch = line.match(/^#{1,3}\s+(.+)/);
+    if (headingMatch) {
+      if (current.heading || current.lines.length) {
+        sections.push(current);
+      }
+      current = { heading: headingMatch[1], lines: [] };
+    } else {
+      current.lines.push(line);
+    }
   }
-};
-
-// --- Main ---
-
-// 1. Scan Contributors
-const users = fs.readdirSync(CONTRIBUTORS_DIR).filter(f => fs.lstatSync(path.join(CONTRIBUTORS_DIR, f)).isDirectory());
-const contributorData = [];
-
-users.forEach(user => {
-  const workflowPath = path.join(CONTRIBUTORS_DIR, user, 'journey', 'workflow.md');
-  if (fs.existsSync(workflowPath)) {
-    const content = fs.readFileSync(workflowPath, 'utf8');
-    const lower = content.toLowerCase();
-
-    // Analyze
-    const recommendations = [];
-    const stack = [];
-
-    // Simple Heuristics
-    if (lower.includes('chatgpt')) stack.push('ChatGPT');
-    if (lower.includes('copilot')) stack.push('GitHub Copilot');
-
-    // Map to Modules based on "chaotic" keywords
-    if (lower.includes('copy paste') || lower.includes('error')) {
-      recommendations.push(sdlcPhases.phase1.modules.find(m => m.id.includes('debugging')));
-      recommendations.push(sdlcPhases.phase1.modules.find(m => m.id.includes('agentic_workflow')));
-    }
-    if (!lower.includes('test')) {
-      recommendations.push(sdlcPhases.phase3.modules.find(m => m.id.includes('testing')));
-    }
-    if (!lower.includes('spec') && !lower.includes('plan')) {
-      recommendations.push(sdlcPhases.phase1.modules.find(m => m.id.includes('prompt_engineering')));
-      recommendations.push(sdlcPhases.phase2.modules.find(m => m.id.includes('idea_filter')));
-    }
-
-    // Dedupe
-    const uniqueRecs = [...new Set(recommendations.filter(Boolean))];
-
-    const data = {
-      user,
-      raw: cleanMarkdown(content),
-      stack,
-      recommendations: uniqueRecs
-    };
-
-    contributorData.push(data);
-
-    // Generate User's "Criteria Package" Page
-    generateUserPage(data);
+  if (current.heading || current.lines.length) {
+    sections.push(current);
   }
-});
+  return sections;
+}
 
-// 2. Generate Main Index
-generateIndex(contributorData, sdlcPhases);
+function extractTips(content) {
+  const tips = [];
+  const lines = content.split('\n');
+  for (const line of lines) {
+    const trimmed = line.trim();
+    // Bullet points that look like tips/advice
+    if (/^[-*]\s+\*\*/.test(trimmed) || /^[-*]\s+`.+`/.test(trimmed)) {
+      tips.push(trimmed);
+    }
+  }
+  return tips;
+}
 
-console.log('✅ Generated Curriculum and User Pages.');
+function extractCodeBlocks(content) {
+  const blocks = [];
+  const regex = /```(\w*)\n([\s\S]*?)```/g;
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    blocks.push({ lang: match[1] || 'text', code: match[2].trim() });
+  }
+  return blocks;
+}
 
+function extractBulletPoints(content) {
+  return content.split('\n')
+    .filter(l => /^\s*[-*]\s+/.test(l))
+    .map(l => l.trim());
+}
+
+function formatName(dirName) {
+  return dirName
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
 
 // --- Generators ---
 
-function generateUserPage(data) {
-  const recLinks = data.recommendations.map(m => `- [${m.title}](/curriculum/${m.id})`).join('\n');
+function generateCourseIndex(name, files, sections) {
+  const displayName = formatName(name);
+  const topics = sections
+    .filter(s => s.heading)
+    .map(s => `- ${s.heading}`)
+    .join('\n');
 
-  const content = `---
-title: Criteria Package for ${data.user}
+  const sourceFiles = files.map(f => `- \`${f.name}\``).join('\n');
+
+  return `---
+title: "Learn from ${displayName}"
 ---
 
-# 📦 Criteria Package: @${data.user}
+# Learn from ${displayName}
 
-Based on your workflow analysis, here is your customized learning path.
+This course was built from ${displayName}'s raw notes and workflows.
 
-## 🧠 Your Workflow Analysis
+## What's Covered
 
-::: info Chaos Context
-${data.raw}
-:::
+${topics || '- General development workflow'}
 
-## 🛠️ Detected Stack
-${data.stack.length ? data.stack.map(s => `- ${s}`).join('\n') : '- General Tools'}
+## Source Material
 
-## 🎓 Recommended Modules
-Detailed deep dives for your specific gaps:
+${sourceFiles}
 
-${recLinks || "No specific gaps detected! You seem orderly."}
+## Start Learning
 
-## ⚡ Quick Actions (Cheatsheet)
-- **Stop Copy-Pasting**: Use CLI agents.
-- **Write Specs**: Don't start coding until you have a plan.
-- **Test**: Even one test saved 5 hours of debugging.
+- [Full Course](./course) — The complete walkthrough
+- [Cheatsheet](./cheatsheet) — Quick reference
 `;
-
-  const outPath = path.join(CURRICULUM_DIR, `user_${data.user}.md`);
-  fs.writeFileSync(outPath, content);
 }
 
-function generateIndex(contributors, phases) {
+function generateCourse(name, files) {
+  const displayName = formatName(name);
+  let courseParts = [];
 
-  // Phase HTML Generator
-  const renderPhase = (phaseKey) => {
-    const p = phases[phaseKey];
-    const mods = p.modules.map(m => `
-      <div class="module-card">
-        <a href="/curriculum/${m.id}">
-            <h4>${m.title}</h4>
-            <div class="tags">${m.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        </a>
-      </div>
-    `).join('');
+  for (const file of files) {
+    const sections = extractSections(file.content);
+    for (const section of sections) {
+      const body = section.lines.join('\n').trim();
+      if (section.heading) {
+        courseParts.push(`## ${section.heading}\n\n${body}`);
+      } else if (body) {
+        courseParts.push(body);
+      }
+    }
+  }
+
+  if (courseParts.length === 0) {
+    courseParts.push('*Content coming soon.*');
+  }
+
+  return `---
+title: "${displayName}'s Course"
+---
+
+# ${displayName}'s Course
+
+What follows is ${displayName}'s knowledge, organized for learning.
+
+---
+
+${courseParts.join('\n\n---\n\n')}
+`;
+}
+
+function generateCheatsheet(name, files) {
+  const displayName = formatName(name);
+  const allContent = files.map(f => f.content).join('\n\n');
+
+  const tips = extractTips(allContent);
+  const codeBlocks = extractCodeBlocks(allContent);
+  const bullets = extractBulletPoints(allContent);
+
+  // Collect unique actionable items
+  const cheatItems = [];
+
+  // Tips from bold bullet points
+  for (const tip of tips) {
+    cheatItems.push(tip);
+  }
+
+  // If few tips found, fall back to all bullet points
+  if (cheatItems.length < 3) {
+    for (const bullet of bullets) {
+      if (!cheatItems.includes(bullet)) {
+        cheatItems.push(bullet);
+      }
+    }
+  }
+
+  const tipsSection = cheatItems.length
+    ? cheatItems.join('\n')
+    : '*No quick tips extracted yet. Add more bullet points to your notes.*';
+
+  const codeSection = codeBlocks.length
+    ? codeBlocks.map(b => `\`\`\`${b.lang}\n${b.code}\n\`\`\``).join('\n\n')
+    : '*No code snippets found.*';
+
+  return `---
+title: "${displayName}'s Cheatsheet"
+---
+
+# ${displayName}'s Cheatsheet
+
+Quick reference extracted from ${displayName}'s notes.
+
+## Key Tips
+
+${tipsSection}
+
+## Code & Commands
+
+${codeSection}
+`;
+}
+
+function generateCoursesIndex(contributors) {
+  const contribList = contributors.map(c => {
+    const displayName = formatName(c.name);
+    const sections = extractSections(c.files.map(f => f.content).join('\n\n'));
+    const topics = sections.filter(s => s.heading).map(s => s.heading).slice(0, 3);
+    const topicStr = topics.length ? topics.join(', ') : 'General workflow';
+    return `- [${displayName}](./${c.name}/) — ${topicStr}`;
+  }).join('\n');
+
+  return `---
+title: Learn from the Pros
+---
+
+# Learn from the Pros
+
+Each contributor shares their real workflow, tips, and hard-won knowledge. The pipeline turns their raw notes into structured learning materials.
+
+## Contributors
+
+${contribList}
+
+## How This Works
+
+1. Experienced developers write messy \`.md\` files in \`contributors/their-name/\`
+2. \`npm run generate:curriculum\` turns those into structured courses
+3. Each contributor gets a curriculum overview, full course, and cheatsheet
+4. A reviewer polishes the output before it goes live
+`;
+}
+
+function generateHomepage(contributors) {
+  const contribCards = contributors.map(c => {
+    const displayName = formatName(c.name);
     return `
-    <div class="phase-section">
-      <h3>${p.title}</h3>
-      <div class="module-grid">${mods}</div>
-    </div>`;
-  };
+      <div class="module-card">
+        <a href="/courses/${c.name}/">
+          <h4>${displayName}</h4>
+          <p>${c.fileCount} note${c.fileCount === 1 ? '' : 's'} &middot; <a href="/courses/${c.name}/course">Course</a> &middot; <a href="/courses/${c.name}/cheatsheet">Cheatsheet</a></p>
+        </a>
+      </div>`;
+  }).join('\n');
 
-  const contribLinks = contributors.map(c =>
-    `<li><a href="/curriculum/user_${c.user}.md"><strong>@${c.user}</strong></a> (${c.recommendations.length} modules recommended)</li>`
-  ).join('');
-
-  const content = `---
+  return `---
 layout: home
 
 hero:
   name: Weekend-to-Release
-  text: The Agentic SDLC
-  tagline: From Blank Page to "It Ships" — Tailored for Humans & AI.
+  text: Learn from the Pros
+  tagline: Real developers share how they actually build and ship. Messy notes in, structured courses out.
   actions:
     - theme: brand
-      text: Start Phase 1
+      text: Start with the Primers
       link: /curriculum/ai_skills/01_the_ai_stack
     - theme: alt
-      text: View Cheatsheets
+      text: Cheatsheet
       link: /cheatsheet
 
 features:
-  - icon: "🧠"
-    title: "Phase 1: It Runs"
-    details: Master the AI stack, prompting, and the build loop.
-  - icon: "🏗️"
-    title: "Phase 2: Build"
-    details: Filter ideas and scope your MVP.
-  - icon: "🚀"
-    title: "Phase 3: It Ships"
-    details: Testing, distribution, and launch.
+  - icon: "📝"
+    title: "Pros Write"
+    details: Experienced developers dump their knowledge into messy markdown files.
+  - icon: "⚙️"
+    title: "Pipeline Builds"
+    details: A generator turns raw notes into structured courses and cheatsheets.
+  - icon: "🎓"
+    title: "Students Learn"
+    details: Per-contributor curriculum, course content, and quick-reference guides.
 ---
 
 <div class="container">
 
-<h2 id="curriculum">📚 The Curriculum</h2>
-<p>Choose your path. View as full course modules or quick cheatsheets.</p>
+<h2 id="pros">Learn from the Pros</h2>
+<p>Each contributor shares their real workflow, tips, and hard-won knowledge.</p>
 
-${renderPhase('phase1')}
-${renderPhase('phase2')}
-${renderPhase('phase3')}
+<div class="module-grid">
+${contribCards}
+</div>
 
-<h2 id="human-devs">👤 Human Developers (Criteria Packages)</h2>
-<p>See how real developers customized their learning path based on their chaos.</p>
+<h2 id="primers">Primers</h2>
+<p>Baseline modules covering the fundamentals of building and shipping with AI.</p>
 
-<ul>
-${contribLinks}
-</ul>
+<div class="phase-section">
+  <h3>Phase 1: From Blank Page to "It Runs"</h3>
+  <div class="module-grid">
+    <div class="module-card"><a href="/curriculum/ai_skills/01_the_ai_stack"><h4>The AI Stack</h4></a></div>
+    <div class="module-card"><a href="/curriculum/ai_skills/02_prompt_engineering"><h4>Prompt Engineering</h4></a></div>
+    <div class="module-card"><a href="/curriculum/ai_skills/03_agentic_workflow"><h4>Agentic Workflow</h4></a></div>
+    <div class="module-card"><a href="/curriculum/ai_skills/04_context_management"><h4>Context Mastery</h4></a></div>
+    <div class="module-card"><a href="/curriculum/ai_skills/05_debugging_collaboratively"><h4>AI Debugging</h4></a></div>
+  </div>
+</div>
+
+<div class="phase-section">
+  <h3>Phase 2: What to Build</h3>
+  <div class="module-grid">
+    <div class="module-card"><a href="/curriculum/01_idea_filter"><h4>Idea Filter</h4></a></div>
+    <div class="module-card"><a href="/curriculum/02_mvp_scope"><h4>MVP Scope</h4></a></div>
+  </div>
+</div>
+
+<div class="phase-section">
+  <h3>Phase 3: From "It Runs" to "It Ships"</h3>
+  <div class="module-grid">
+    <div class="module-card"><a href="/curriculum/03_distribution"><h4>Distribution</h4></a></div>
+    <div class="module-card"><a href="/curriculum/04_config_safety"><h4>Config & Safety</h4></a></div>
+    <div class="module-card"><a href="/curriculum/05_testing"><h4>Testing</h4></a></div>
+    <div class="module-card"><a href="/curriculum/06_versioning"><h4>Versioning</h4></a></div>
+    <div class="module-card"><a href="/curriculum/07_support_loop"><h4>Support Loop</h4></a></div>
+    <div class="module-card"><a href="/curriculum/08_launch_feedback"><h4>Launch & Roadmap</h4></a></div>
+  </div>
+</div>
 
 </div>
 
@@ -208,10 +316,10 @@ ${contribLinks}
 .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
 h2 { border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 0.5rem; margin-top: 4rem; margin-bottom: 2rem; }
 
-.phase-section { margin-bottom: 3rem; }
+.phase-section { margin-bottom: 2rem; }
 .phase-section h3 { color: var(--vp-c-brand); margin-bottom: 1rem; }
 
-.module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+.module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 
 .module-card {
   border: 1px solid var(--vp-c-divider);
@@ -220,13 +328,63 @@ h2 { border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 0.5rem; margi
   transition: transform 0.2s;
 }
 .module-card:hover { transform: translateY(-2px); border-color: var(--vp-c-brand); }
-.module-card a { display: block; padding: 1.5rem; text-decoration: none !important; color: inherit !important; }
-.module-card h4 { margin: 0 0 0.5rem 0; font-weight: 600; }
-
-.tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.tag { font-size: 0.75em; background: var(--vp-c-bg-mute); padding: 2px 6px; border-radius: 4px; opacity: 0.8; }
+.module-card a { display: block; padding: 1.25rem; text-decoration: none !important; color: inherit !important; }
+.module-card h4 { margin: 0 0 0.25rem 0; font-weight: 600; }
+.module-card p { margin: 0; font-size: 0.85em; opacity: 0.8; }
 </style>
 `;
-
-  fs.writeFileSync(INDEX_FILE, content);
 }
+
+// --- Main ---
+
+// Ensure courses/ exists
+if (!fs.existsSync(COURSES_DIR)) {
+  fs.mkdirSync(COURSES_DIR, { recursive: true });
+}
+
+// Scan contributors
+const contributors = fs.readdirSync(CONTRIBUTORS_DIR)
+  .filter(f => {
+    const fullPath = path.join(CONTRIBUTORS_DIR, f);
+    return fs.lstatSync(fullPath).isDirectory();
+  })
+  .map(name => {
+    const dir = path.join(CONTRIBUTORS_DIR, name);
+    const files = readContributorFiles(dir);
+    return { name, files, fileCount: files.length };
+  })
+  .filter(c => c.files.length > 0);
+
+console.log(`Found ${contributors.length} contributors with content.`);
+
+// Generate per-contributor courses
+for (const contrib of contributors) {
+  const outDir = path.join(COURSES_DIR, contrib.name);
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir, { recursive: true });
+  }
+
+  const sections = extractSections(contrib.files.map(f => f.content).join('\n\n'));
+
+  const indexContent = generateCourseIndex(contrib.name, contrib.files, sections);
+  const courseContent = generateCourse(contrib.name, contrib.files);
+  const cheatsheetContent = generateCheatsheet(contrib.name, contrib.files);
+
+  fs.writeFileSync(path.join(outDir, 'index.md'), indexContent);
+  fs.writeFileSync(path.join(outDir, 'course.md'), courseContent);
+  fs.writeFileSync(path.join(outDir, 'cheatsheet.md'), cheatsheetContent);
+
+  console.log(`  Generated courses/${contrib.name}/ (${contrib.fileCount} source files)`);
+}
+
+// Generate courses/index.md (directory listing)
+const coursesIndexContent = generateCoursesIndex(contributors);
+fs.writeFileSync(path.join(COURSES_DIR, 'index.md'), coursesIndexContent);
+console.log('Generated courses/index.md');
+
+// Generate homepage
+const homepageContent = generateHomepage(contributors);
+fs.writeFileSync(INDEX_FILE, homepageContent);
+console.log('Generated index.md');
+
+console.log('Done.');
