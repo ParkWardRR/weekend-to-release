@@ -1,7 +1,7 @@
 {
   "name": "weekend-to-release",
   "version": "2.0.0",
-  "description": "Learn Charter-Orchestrated Engineering with ACE Toolkit",
+  "description": "Learn Charter-Orchestrated Engineering with Auro",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

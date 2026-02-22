@@ -45,4 +45,4 @@ FR-004: The system shall send notifications when a task is overdue.
   [NEEDS CLARIFICATION: How overdue -- immediately at midnight, or after a grace period?]
 ```
 
-The agent adds these markers during `/ACE.charter`. You resolve them with `/ACE.clarify`. This prevents the common failure mode where the AI assumes an answer and builds the wrong thing.
+The agent adds these markers during `/auro.charter`. You resolve them with `/auro.clarify`. This prevents the common failure mode where the AI assumes an answer and builds the wrong thing.

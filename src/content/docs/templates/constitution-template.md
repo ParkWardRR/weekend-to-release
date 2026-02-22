@@ -1,6 +1,6 @@
 ---
 title: Constitution Template
-description: The template used by /ACE.constitution to define project principles.
+description: The template used by /auro.constitution to define project principles.
 ---
 
 The constitution template structures your project's governing principles.

@@ -6,7 +6,7 @@ description: Execute the task list and build the energy monitor.
 We run:
 
 ```
-/ACE.implement
+/auro.implement
 ```
 
 The agent reads `tasks.md` and begins executing phase by phase.

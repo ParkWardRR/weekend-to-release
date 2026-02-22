@@ -1,6 +1,6 @@
 ---
 title: Tasks Template
-description: The template used by /ACE.tasks to generate phased task lists.
+description: The template used by /auro.tasks to generate phased task lists.
 ---
 
 The tasks template organizes work into sequential phases with parallel markers.

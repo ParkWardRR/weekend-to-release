@@ -35,3 +35,9 @@ Technical Context:
 ```
 
 Every entry traces back to a charter requirement or a constitutional article. If the charter does not mention performance, the performance field says so explicitly rather than inventing a target.
+
+## Architecture Template
+
+For a production-ready hybrid profile (managed coordinators, persistent storage, burst AI workers, and local fallback hardware), use:
+
+- [Architecture and Build Template](/weekend-to-release/templates/architecture-build-template/)

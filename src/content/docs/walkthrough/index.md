@@ -1,11 +1,11 @@
 ---
 title: "Example Project: Home Energy Monitor"
-description: End-to-end walkthrough building a feature with ACE and ACE Toolkit.
+description: End-to-end walkthrough building a feature with ACE and Auro.
 ---
 
 This walkthrough builds a **Home Energy Monitor** -- a web dashboard that tracks electricity usage from smart meters, shows daily/weekly/monthly charts, and sends alerts when usage spikes.
 
-We will walk through all four ACE phases with actual ACE Toolkit output at each step.
+We will walk through all four ACE phases with actual Auro output at each step.
 
 ## The Feature
 

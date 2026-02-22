@@ -11,7 +11,7 @@ Without a constitution, AI agents make their own architectural decisions. They p
 
 ## The Default 9 Articles
 
-ACE Toolkit ships with 9 articles. Customize, remove, or add your own.
+Auro ships with 9 articles. Customize, remove, or add your own.
 
 | # | Article | Rule |
 |---|---------|------|
@@ -28,10 +28,10 @@ ACE Toolkit ships with 9 articles. Customize, remove, or add your own.
 ## Creating Your Constitution
 
 ```
-/ACE.constitution
+/auro.constitution
 ```
 
-The agent walks you through each article, asking whether to keep, modify, or remove it. The result saves to `.charter/constitution.md`.
+The agent walks you through each article, asking whether to keep, modify, or remove it. The result saves to `.auro/constitution.md`.
 
 ## How It Flows Through Phases
 
@@ -64,7 +64,7 @@ Common modifications:
 - **Add a Performance article** for latency requirements
 - **Modify Test-First** to charter coverage thresholds
 
-Edit `.charter/constitution.md` directly. All slash commands use the updated version.
+Edit `.auro/constitution.md` directly. All slash commands use the updated version.
 
 ## Next Steps
 

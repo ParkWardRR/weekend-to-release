@@ -22,7 +22,7 @@ charters/N-feature-name/
 
 ## Source Tree Options
 
-ACE Toolkit supports three layouts. Pick the one that matches your project.
+Auro supports three layouts. Pick the one that matches your project.
 
 ### Single Project
 

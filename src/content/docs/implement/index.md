@@ -3,7 +3,7 @@ title: The Implement Phase
 description: Execute tasks phase by phase with AI agents.
 ---
 
-The Implement phase takes your task list and executes it. Run `/ACE.implement` and the agent works through each phase, marking tasks complete as it goes.
+The Implement phase takes your task list and executes it. Run `/auro.implement` and the agent works through each phase, marking tasks complete as it goes.
 
 ## Execution Flow
 

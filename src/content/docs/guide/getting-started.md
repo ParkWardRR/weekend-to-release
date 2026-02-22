@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: Install ACE Toolkit and initialize your first project.
+description: Install Auro and initialize your first project.
 ---
 
 ## Prerequisites
@@ -12,7 +12,7 @@ description: Install ACE Toolkit and initialize your first project.
 ## Installation
 
 ```bash
-uv tool install charter-cli
+uv tool install auro-cli
 ```
 
 If you do not have `uv`:
@@ -21,12 +21,12 @@ If you do not have `uv`:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Verify: `charter --version`
+Verify: `auro --version`
 
 ## Initialize a Project
 
 ```bash
-charter init my-project
+auro init my-project
 cd my-project
 ```
 
@@ -34,21 +34,21 @@ This creates:
 
 ```
 my-project/
-  .charter/
+  .auro/
     templates/       # charter, plan, and task templates
     scripts/         # Slash command definitions
     memory/          # Persistent context for AI agents
     constitution.md  # Governing principles
 ```
 
-The `.charter/` directory is the source of truth. Everything else is derived from it.
+The `.auro/` directory is the source of truth. Everything else is derived from it.
 
 ## Agent Setup
 
-ACE Toolkit auto-detects your AI agent. Verify with:
+Auro auto-detects your AI agent. Verify with:
 
 ```bash
-charter doctor
+auro doctor
 ```
 
 ## The Quick Workflow
@@ -58,7 +58,7 @@ Four commands, run inside your AI agent's chat:
 ### 1. Set Your Constitution
 
 ```
-/ACE.constitution
+/auro.constitution
 ```
 
 Define the rules that every charter, plan, and task must follow. Once per project.
@@ -66,7 +66,7 @@ Define the rules that every charter, plan, and task must follow. Once per projec
 ### 2. Write a charter
 
 ```
-/ACE.charter
+/auro.charter
 ```
 
 Describe what you want to build. The agent produces structured charters with user stories, requirements, and acceptance criteria.
@@ -74,7 +74,7 @@ Describe what you want to build. The agent produces structured charters with use
 ### 3. Generate a Plan
 
 ```
-/ACE.plan
+/auro.plan
 ```
 
 The agent reads your charter and produces a technical plan with architecture decisions and phase gates.
@@ -82,10 +82,10 @@ The agent reads your charter and produces a technical plan with architecture dec
 ### 4. Create Tasks
 
 ```
-/ACE.tasks
+/auro.tasks
 ```
 
-The agent breaks the plan into phased, parallel-ready task lists. Then `/ACE.implement` to execute them.
+The agent breaks the plan into phased, parallel-ready task lists. Then `/auro.implement` to execute them.
 
 ## The Feedback Loop
 

@@ -1,6 +1,6 @@
 ---
 title: Plan Template
-description: The template used by /ACE.plan to generate implementation plans.
+description: The template used by /auro.plan to generate implementation plans.
 ---
 
 The plan template structures technical decisions and constitutional compliance.

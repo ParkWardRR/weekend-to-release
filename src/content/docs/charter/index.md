@@ -3,13 +3,13 @@ title: The charter Phase
 description: Define what to build with structured charters before writing any code.
 ---
 
-The charter phase transforms a feature idea into a structured charter. Run `/ACE.charter "your feature description"` and ACE Toolkit creates a branch, generates a charter from the template, and marks ambiguities.
+The charter phase transforms a feature idea into a structured charter. Run `/auro.charter "your feature description"` and Auro creates a branch, generates a charter from the template, and marks ambiguities.
 
 ## What Gets Generated
 
 ```mermaid
 flowchart LR
-    A[Feature Idea] --> B["/ACE.charter"]
+    A[Feature Idea] --> B["/auro.charter"]
     B --> C[Branch Created]
     C --> D[charter.md Generated]
     D --> E[Review & Clarify]
@@ -26,7 +26,7 @@ Each user story must be independently testable. If you implement only one story,
 
 ## Key Principle
 
-Ambiguity is marked, not assumed. When the agent encounters something unclear, it writes `[NEEDS CLARIFICATION: question]` instead of guessing. You resolve these with `/ACE.clarify`.
+Ambiguity is marked, not assumed. When the agent encounters something unclear, it writes `[NEEDS CLARIFICATION: question]` instead of guessing. You resolve these with `/auro.clarify`.
 
 ## Pages in This Section
 

@@ -3,7 +3,7 @@ title: Consistency Analysis
 description: Check alignment across your charter, plan, and tasks.
 ---
 
-The `/ACE.analyze` command performs a read-only analysis of your charter artifacts. It finds gaps, duplications, and inconsistencies before implementation begins.
+The `/auro.analyze` command performs a read-only analysis of your charter artifacts. It finds gaps, duplications, and inconsistencies before implementation begins.
 
 ## What It Checks
 
@@ -41,4 +41,4 @@ Findings:
 
 ## When to Run
 
-Run `/ACE.analyze` after generating tasks and before starting implementation. It is your last chance to catch problems cheaply. After implementation begins, fixes cost 10x more.
+Run `/auro.analyze` after generating tasks and before starting implementation. It is your last chance to catch problems cheaply. After implementation begins, fixes cost 10x more.

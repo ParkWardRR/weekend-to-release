@@ -9,7 +9,7 @@ export default defineConfig({
     integrations: [
         starlight({
             title: 'Weekend-to-Release',
-            description: 'Learn Charter-Orchestrated Engineering with ACE Toolkit',
+            description: 'Learn Charter-Orchestrated Engineering with Auro',
             favicon: '/favicon.png',
             defaultLocale: 'root',
             locales: {
@@ -29,6 +29,7 @@ export default defineConfig({
                     label: 'Foundations',
                     items: [
                         { label: 'What is ACE?', slug: 'guide/what-is-ACE' },
+                        { label: 'Context and charter Integrity', slug: 'guide/context-and-charter-integrity' },
                         { label: 'Getting Started', slug: 'guide/getting-started' },
                         { label: 'Your Constitution', slug: 'guide/constitution' },
                     ],
@@ -80,6 +81,7 @@ export default defineConfig({
                         { label: 'Constitution Template', slug: 'templates/constitution-template' },
                         { label: 'Checklist Template', slug: 'templates/checklist-template' },
                         { label: 'Agent File Template', slug: 'templates/agent-file-template' },
+                        { label: 'Architecture and Build Template', slug: 'templates/architecture-build-template' },
                     ],
                 },
                 {

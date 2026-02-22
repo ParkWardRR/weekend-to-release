@@ -2,7 +2,7 @@
 
 [**START LEARNING (LIVE SITE)**](https://ParkWardRR.github.io/weekend-to-release/)
 
-## Charter-Orchestrated Engineering with ACE Toolkit
+## Charter-Orchestrated Engineering with Auro
 
 A practical guide to building software with AI agents using an ACE toolkit. Stop guessing, start specifying.
 
@@ -12,10 +12,22 @@ This site teaches **Charter-Orchestrated Engineering (ACE)** -- a methodology wh
 
 | Phase | Command | What Happens |
 |-------|---------|--------------|
-| **charter** | `/ACE.charter` | Define user stories, requirements, and success criteria |
-| **Plan** | `/ACE.plan` | Translate charters into technical plans with phase gates |
-| **Tasks** | `/ACE.tasks` | Break plans into phased, parallel-ready task lists |
-| **Implement** | `/ACE.implement` | AI agent executes tasks, you review and ship |
+| **charter** | `/auro.charter` | Define user stories, requirements, and success criteria |
+| **Plan** | `/auro.plan` | Translate charters into technical plans with phase gates |
+| **Tasks** | `/auro.tasks` | Break plans into phased, parallel-ready task lists |
+| **Implement** | `/auro.implement` | AI agent executes tasks, you review and ship |
+
+## Overhaul Highlights
+
+- **Branding refresh:** renamed to **Auro** with `/auro.*` command namespace.
+- **Context-window strategy:** layered charter model + explicit token budgets to protect implementation capacity.
+- **charter integrity model:** canonical charters + feature deltas so charters stay long-lived and accurate.
+- **New architecture template:** hybrid coordinator/storage/compute blueprint for low baseline cost and burst AI throughput.
+
+See:
+
+- `src/content/docs/guide/context-and-charter-integrity.md`
+- `src/content/docs/templates/architecture-build-template.md`
 
 ## Tech Stack
 

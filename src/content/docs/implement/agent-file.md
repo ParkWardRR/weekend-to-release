@@ -3,7 +3,7 @@ title: Agent Guidance File
 description: Auto-generated context files that ground AI agents in your project.
 ---
 
-ACE Toolkit generates an agent-specific guidance file that provides persistent context about your project. This file is automatically updated when you run `/ACE.plan`.
+Auro generates an agent-specific guidance file that provides persistent context about your project. This file is automatically updated when you run `/auro.plan`.
 
 ## What It Contains
 
@@ -20,12 +20,12 @@ ACE Toolkit generates an agent-specific guidance file that provides persistent c
 | Claude Code | `.claude/CLAUDE.md` |
 | GitHub Copilot | `.github/copilot-instructions.md` |
 | Cursor | `.cursor/rules` |
-| Windsurf | `.windsurf/workflows/ACE.md` |
-| Gemini CLI | `.gemini/commands/ACE.toml` |
+| Windsurf | `.windsurf/workflows/auro.md` |
+| Gemini CLI | `.gemini/commands/auro.toml` |
 
 ## How It Works
 
-When you run `/ACE.plan`, the `update-agent-context` script:
+When you run `/auro.plan`, the `update-agent-context` script:
 
 1. Scans all `plan.md` files for technology references
 2. Extracts the project structure

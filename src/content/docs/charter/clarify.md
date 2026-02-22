@@ -3,7 +3,7 @@ title: Clarify Ambiguities
 description: Resolve unknowns in your charter with interactive Q&A.
 ---
 
-The `/ACE.clarify` command scans your charter for ambiguities and helps you resolve them interactively.
+The `/auro.clarify` command scans your charter for ambiguities and helps you resolve them interactively.
 
 ## How It Works
 
@@ -33,6 +33,6 @@ FR-004: The system shall display in-app notifications when a task is overdue.
 
 ## When to Run It
 
-Run `/ACE.clarify` after `/ACE.charter` generates the initial charter. You can run it multiple times. Each pass resolves more ambiguities until the charter is clean.
+Run `/auro.clarify` after `/auro.charter` generates the initial charter. You can run it multiple times. Each pass resolves more ambiguities until the charter is clean.
 
 A charter with zero `[NEEDS CLARIFICATION]` markers is ready for the [Plan phase](/weekend-to-release/plan/).
