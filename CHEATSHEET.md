@@ -1,79 +1,110 @@
+# Spec Kit Cheatsheet
 
-# 🗺️ The Cheatsheet: Weekend-to-Release (AI Edition)
-
-### The 2-Page "Ultimate Guide" for Shipping with Agents
-This is the distilled version of the entire course. Use this as your roadmap.
+Quick reference for Specification-Driven Development with GitHub Spec Kit.
 
 ---
 
-## 📄 Page 1: The AI Dev Loop (80%)
+## Install
 
-### 1. 🤖 The Agent Setup
-**Goal:** Your AI is the Senior Dev. You are the Architect.
-
-```mermaid
-flowchart TD
-    A[Idea: Rough Sketch] --> B{Write Spec?}
-    B -- No --> C[Garbage Code Loop]
-    B -- Yes --> D[Good Prompt: Role+Context+Constraint]
-    D --> E[Agent Writes Plan]
-    E --> F[Agent Writes Code]
-    F --> G{Review & Test}
-    G -- Fail --> H[Paste Error -> Agent Fix]
-    G -- Pass --> I[Ship Feature]
-    
-    style I fill:#bbf,stroke:#333
-    style C fill:#f99,stroke:#333
-    style H fill:#f96,stroke:#333
+```bash
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
 ```
 
-### 2. 📝 The Golden Prompt Formula
-**Context + Action + Output Format**
+## The Workflow
 
-> **Bad:** "Make a landing page."
-> **Good:** "Context: We are building a portfolio for a designer. Action: Create `index.html` with a hero section, grid gallery, and contact form. Use TailwindCSS. Output: Only the code for `index.html`."
+```
+Idea --> /speckit.specify --> Spec --> /speckit.plan --> Plan --> /speckit.tasks --> Tasks --> /speckit.implement --> Ship
+```
 
-### 3. 🧠 Context Management
-**Rule of Thumb:**
-- **Start Fresh:** Reset context every major feature.
-- **Reference:** Point to existing files (`@src/utils.ts`) instead of pasting entire repo.
-- **Docs:** Keep a `tech_stack.md` or `.cursorrules` to ground the AI.
+## Commands
+
+| Command | Phase | What It Does |
+|---------|-------|--------------|
+| `/speckit.constitution` | Setup | Define project governing principles |
+| `/speckit.specify` | 1. Specify | Create feature spec (stories, requirements, criteria) |
+| `/speckit.clarify` | 1. Specify | Resolve [NEEDS CLARIFICATION] markers interactively |
+| `/speckit.plan` | 2. Plan | Generate technical plan with phase gates |
+| `/speckit.tasks` | 3. Tasks | Break plan into phased task list with [P] markers |
+| `/speckit.analyze` | 3. Tasks | Run consistency analysis across spec/plan/tasks |
+| `/speckit.implement` | 4. Implement | Execute tasks phase by phase |
+| `/speckit.checklist` | Any | Generate validation checklist for a feature |
+
+## Spec Structure
+
+```
+User Stories (P1, P2, P3 priority)
+  -> Each: title, description, Given/When/Then acceptance
+Requirements (FR-001, FR-002, ...)
+  -> Key Entities for data features
+Success Criteria (SC-001, SC-002, ...)
+  -> Measurable, technology-agnostic
+Edge Cases
+  -> Boundary conditions, error scenarios
+```
+
+## Plan Structure
+
+```
+Technical Context (language, deps, storage, testing, platform)
+Constitution Check (gates must pass)
+Project Structure (docs tree + source layout)
+Phase 0: Research (resolve unknowns)
+Phase 1: Design (data models, contracts, quickstart)
+```
+
+## Task Format
+
+```
+- [ ] [ID] [P?] [US#] Description file/path
+
+[P]  = can run in parallel
+[US#] = maps to user story
+[ID]  = sequential number
+```
+
+## Task Phases
+
+```
+Phase 1: Setup (scaffolding, deps, CI)
+Phase 2: Foundational (blocking prereqs for all stories)
+Phase 3+: User Stories (one phase per story, P1 first)
+Final: Polish (docs, cross-cutting, cleanup)
+```
+
+## The 9 Articles
+
+| # | Article | Key Rule |
+|---|---------|----------|
+| I | Library-First | Every feature starts as a standalone library |
+| II | CLI Interface | Libraries expose text-in/structured-out CLI |
+| III | Test-First | Write tests before code (NON-NEGOTIABLE) |
+| IV | Integration Testing | Real databases, actual services, no mocks |
+| V | Observability | Text I/O ensures debuggability |
+| VI | Versioning | MAJOR.MINOR.BUILD format |
+| VII | Simplicity | Max 3 projects, no future-proofing |
+| VIII | Anti-Abstraction | Use frameworks directly, no wrappers |
+| IX | Integration-First | Realistic environments required |
+
+## Phase Gates
+
+Three gates that must pass before implementation:
+
+1. **Simplicity Gate** -- Confirms minimal project structure (Article VII)
+2. **Anti-Abstraction Gate** -- Validates direct framework usage (Article VIII)
+3. **Integration-First Gate** -- Ensures contracts and contract tests exist (Article IX)
+
+## Decision Tree
+
+Not sure which command to use?
+
+- Have an idea but no spec? --> `/speckit.specify`
+- Spec has [NEEDS CLARIFICATION]? --> `/speckit.clarify`
+- Spec is clean, need a plan? --> `/speckit.plan`
+- Plan is ready, need tasks? --> `/speckit.tasks`
+- Want to check consistency? --> `/speckit.analyze`
+- Tasks are ready, time to build? --> `/speckit.implement`
+- Need project principles? --> `/speckit.constitution`
 
 ---
 
-## 📄 Page 2: The Release Rocket (20%)
-
-### 4. 📦 The Package & Config
-**Goal:** "It works on my machine" -> "It works on yours."
-
-- **Must Have:**
-  - ✅ `README.md` (What is this?)
-  - ✅ `INSTALL.md` (How to run it?)
-  - ✅ `.env.example` (Config structure)
-
-### 5. 🏷️ Versioning & Changelog
-**Goal:** Communicate changes clearly.
-
-| Version | Meaning | Example |
-| :--- | :--- | :--- |
-| **Major** | Breaking changes. | `1.0.0` -> `2.0.0` |
-| **Minor** | New features (safe). | `1.1.0` -> `1.2.0` |
-| **Patch** | Bug fixes (safe). | `1.1.1` -> `1.1.2` |
-
-**The Changelog Rule:**
-- **Added:** New features.
-- **Fixed:** Bug fixes.
-- **Changed:** Existing behavior changes.
-
-### 6. 🚀 The Launch Checklist
-- [ ] **Repo:** Public, clean history.
-- [ ] **Readme:** Screenshot at the top.
-- [ ] **Install:** Verified on a *clean* machine.
-- [ ] **Release:** Tagged `v1.0.0` with notes.
-- [ ] **Social:** Meaningful announcement (Problem -> Solution -> Link).
-
----
-
-<div align="center">
-<sub>Print this or keep it open while you build. This is the path to shipping.</sub>
-</div>
+**Official repo:** [github.com/github/spec-kit](https://github.com/github/spec-kit)

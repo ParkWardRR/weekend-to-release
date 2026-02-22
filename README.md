@@ -1,63 +1,41 @@
 # Weekend-to-Release
 
-👉 [**START LEARNING NOW (LIVE SITE)**](https://ParkWardRR.github.io/weekend-to-release/)
+[**START LEARNING (LIVE SITE)**](https://ParkWardRR.github.io/weekend-to-release/)
 
-<div align="center">
+## Specification-Driven Development with GitHub Spec Kit
 
-<img src="./src/assets/hero_starlight.png" width="300" alt="Weekend-to-Release Hero">
+A practical guide to building software with AI agents using [GitHub Spec Kit](https://github.com/github/spec-kit). Stop guessing, start specifying.
 
-### Build and Ship with AI
-**A step-by-step guide to going from a blank page to a public release, using AI agents as your development team.**
+This site teaches **Specification-Driven Development (SDD)** -- a methodology where specifications are the primary artifact, not code. You write specs, and AI agents generate the implementation.
 
+## What You'll Learn
 
-</div>
+| Phase | Command | What Happens |
+|-------|---------|--------------|
+| **Specify** | `/speckit.specify` | Define user stories, requirements, and success criteria |
+| **Plan** | `/speckit.plan` | Translate specs into technical plans with phase gates |
+| **Tasks** | `/speckit.tasks` | Break plans into phased, parallel-ready task lists |
+| **Implement** | `/speckit.implement` | AI agent executes tasks, you review and ship |
 
----
+## Tech Stack
 
-## 🚀 Overview
-
-This repository is a **living curriculum** and **cheatsheet** for developers who want to master the art of building software with AI agents (like ChatGPT, Claude, DeepSeek, Cursor, and Cline).
-
-It is built with **Astro Starlight** for a high-performance, beautiful documentation experience.
-
-## 📚 Curriculum
-
-We have gathered workflows from different "mentors" (personas) to show you different ways to build:
-
-- **Antigravity (The Methodical Engineer):** Uses `spec -> build -> test` loops, atomic commits, and strict context management.
-- **Alex (The Rapid Prototyper):** Moves fast, breaks things, and iterates quickly.
-- **Claire (The Explorer):** Focuses on learning and deeper understanding.
-
-## 🛠️ Tech Stack & Setup
-
-This project uses **Astro Starlight**.
+Built with [Astro Starlight](https://starlight.astro.build/) for a fast, accessible documentation experience.
 
 ### Prerequisites
+
 - Node.js 18+
 - npm
 
-### Installation
+### Running Locally
 
 ```bash
 git clone https://github.com/ParkWardRR/weekend-to-release.git
 cd weekend-to-release
 npm install
-```
-
-### Running Locally
-
-```bash
 npm run dev
 ```
-Open [http://localhost:4321](http://localhost:4321) to view the site.
 
-### Generating Content
-
-The curriculum is generated from raw markdown files in the `contributors/` directory. To regenerate the site content:
-
-```bash
-npm run generate:curriculum
-```
+Open [http://localhost:4321/weekend-to-release/](http://localhost:4321/weekend-to-release/) to view the site.
 
 ### Building for Production
 
@@ -65,17 +43,11 @@ npm run generate:curriculum
 npm run build
 ```
 
-## 🎨 Customization
-
-- **Theme:** The site uses a custom "Friendly & Inspiring" theme defined in `src/styles/custom.css`.
-- **Configuration:** `astro.config.mjs` handles Starlight plugins and sidebar.
-- **Content:** Edit files in `contributors/` and regenerate, or edit `src/content/docs/` directly for static pages.
-
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repo.
-2. Add your own notes to `contributors/your_name/`.
-3. Run `npm run generate:curriculum` to test.
+2. Edit content in `src/content/docs/`.
+3. Run `npm run build` to verify.
 4. Open a PR.
 
 ---

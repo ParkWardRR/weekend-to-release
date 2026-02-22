@@ -1,40 +1,60 @@
 ---
 title: Weekend-to-Release
-description: Build and Ship with AI
+description: Specification-Driven Development with GitHub Spec Kit
 template: splash
 hero:
-  tagline: A step-by-step guide to going from a blank page to a public release, using AI agents as your development team.
-  image:
-    file: ../../assets/hero_starlight.png
+  tagline: "Stop guessing. Start specifying. A practical guide to building software with AI agents using GitHub Spec Kit's spec-driven methodology."
   actions:
     - text: Start Learning
-      link: /contributors/
+      link: /weekend-to-release/guide/what-is-sdd/
       icon: right-arrow
       variant: primary
-    - text: View on GitHub
-      link: https://github.com/ParkWardRR/weekend-to-release
+    - text: View Spec Kit
+      link: https://github.com/github/spec-kit
       icon: external
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## The Strategy
+## The SDD Workflow
+
+Specification-Driven Development breaks building software into four repeatable phases.
+Each phase produces an artifact that feeds the next one. Nothing is left to guesswork.
 
 <CardGrid stagger>
-  <Card title="Spec" icon="pencil">
-    Define exactly what to build. AI is your architect.
+  <Card title="Specify" icon="pencil">
+    Define what to build with structured specs. User stories, requirements, and success criteria -- all before a single line of code.
   </Card>
-  <Card title="Build" icon="hammer">
-    Let the agents write the code. You review and merge.
+  <Card title="Plan" icon="setting">
+    Translate specs into technical plans with phase gates and constitutional checks. Every decision traces to a requirement.
   </Card>
-  <Card title="Test" icon="approve-check-circle">
-    Verify functionality. Smoke tests and config checks.
+  <Card title="Tasks" icon="list-format">
+    Break plans into phased, parallel-ready task lists for AI agents. Each task is small, testable, and independent.
   </Card>
-  <Card title="Ship" icon="rocket">
-    Release to the world. Versioning and distribution.
+  <Card title="Implement" icon="rocket">
+    Hand tasks to your AI agent. Review the output, run the tests, ship it.
   </Card>
 </CardGrid>
 
-## Contributors
+## How It Fits Together
 
-Check out the [Contributors Page](/contributors/) to see who built this.
+```mermaid
+flowchart LR
+    A[Idea] --> B["/speckit.specify"]
+    B --> C[Spec]
+    C --> D["/speckit.plan"]
+    D --> E[Plan]
+    E --> F["/speckit.tasks"]
+    F --> G[Tasks]
+    G --> H["/speckit.implement"]
+    H --> I[Working Code]
+    I -->|refine| C
+```
+
+Each phase has a dedicated slash command. You run the command, the AI agent does the work within your constraints, and you review the output before moving on.
+
+The specification is the source of truth at every step. If the code does not match the spec, the code is wrong.
+
+## Get Started
+
+Head to [What is SDD?](/weekend-to-release/guide/what-is-sdd/) to understand the methodology, or jump to [Getting Started](/weekend-to-release/guide/getting-started/) to install Spec Kit now.
