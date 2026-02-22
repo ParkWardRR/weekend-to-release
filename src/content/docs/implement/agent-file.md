@@ -3,14 +3,14 @@ title: Agent Guidance File
 description: Auto-generated context files that ground AI agents in your project.
 ---
 
-Auro generates an agent-specific guidance file that provides persistent context about your project. This file is automatically updated when you run `/auro.plan`.
+Auro generates an agent-tailored guidance file that provides persistent context about your project. This file is automatically updated when you run `/auro.plan`.
 
 ## What It Contains
 
 - **Active Technologies** -- Extracted from all `plan.md` files in your project
 - **Project Structure** -- The actual directory layout from your plans
 - **Commands** -- Only the commands relevant to your tech stack
-- **Code Style** -- Language-specific guidelines
+- **Code Style** -- Language-level guidelines
 - **Recent Changes** -- The last 3 features added to the project
 
 ## Agent File Locations

@@ -10,7 +10,7 @@ The plan template structures technical decisions and constitutional compliance.
 ```markdown
 # Implementation Plan: [FEATURE_NAME]
 Branch: [N]-[short-name]
-charter: charters/[N]-[short-name]/charter.md
+Charter: charters/[N]-[short-name]/charter.md
 
 ## Summary
 [Primary requirements and technical approach]

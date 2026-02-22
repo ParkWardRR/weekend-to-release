@@ -58,7 +58,7 @@ frontend/
 
 ### Mobile + API
 
-For platform-specific clients:
+For platform-tailored clients:
 
 ```
 api/

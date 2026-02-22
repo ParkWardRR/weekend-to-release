@@ -35,7 +35,7 @@ This creates:
 ```
 my-project/
   .auro/
-    templates/       # charter, plan, and task templates
+    templates/       # Charter, plan, and task templates
     scripts/         # Slash command definitions
     memory/          # Persistent context for AI agents
     constitution.md  # Governing principles
@@ -63,7 +63,7 @@ Four commands, run inside your AI agent's chat:
 
 Define the rules that every charter, plan, and task must follow. Once per project.
 
-### 2. Write a charter
+### 2. Write a Charter
 
 ```
 /auro.charter
@@ -91,7 +91,7 @@ The agent breaks the plan into phased, parallel-ready task lists. Then `/auro.im
 
 ```mermaid
 flowchart LR
-    A[Constitution] --> B[charter]
+    A[Constitution] --> B[Charter]
     B --> C[Plan]
     C --> D[Tasks]
     D --> E[Implement]
@@ -102,4 +102,4 @@ After implementation, update charters based on what you learned and run through 
 
 ## Next Steps
 
-Before specifying anything, you need a constitution. Continue to [Your Constitution](/weekend-to-release/guide/constitution/).
+Before framing anything, you need a constitution. Continue to [Your Constitution](/weekend-to-release/guide/constitution/).

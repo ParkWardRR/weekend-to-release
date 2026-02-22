@@ -27,7 +27,7 @@ Between each phase, you review the output. This is the human-in-the-loop checkpo
 
 1. The agent reads `tasks.md` and parses phases
 2. It initializes the project structure from `plan.md`
-3. It executes tasks in order, respecting `[P]` parallel markers
+3. It executes tasks in order, honoring `[P]` parallel markers
 4. Completed tasks are marked `[X]` in the task file
 5. On failure, non-parallel tasks halt the phase
 6. At each phase boundary, you review before proceeding

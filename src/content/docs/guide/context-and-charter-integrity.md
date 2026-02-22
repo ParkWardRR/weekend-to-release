@@ -1,22 +1,22 @@
 ---
-title: Context Budget and charter Integrity
+title: Context Budget and Charter Integrity
 description: Resolve token-window constraints and keep charters as a long-lived source of truth.
 ---
 
 This guide addresses two common failure modes in AI-assisted charter workflows:
 
 1. Context windows get saturated by verbose charters, leaving too little room for implementation.
-2. charters become branch-local artifacts that drift away from the actual target architecture.
+2. Charters become branch-local artifacts that drift away from the actual target architecture.
 
 ## Gap 1: Token Budget and Context Limits
 
 Large charters can consume too much context before implementation starts.
 
-### Auro Solution: Layered charters + Budget Policy
+### Auro Solution: Layered Charters + Budget Policy
 
 Use three layers instead of one monolithic charter:
 
-- **Canonical charter (long-lived)**: full target-state document in `.auro/charters/`.
+- **Canonical Charter (long-lived)**: full target-state document in `.auro/charters/`.
 - **Execution Brief (short-lived)**: the current story/phase summary used by the agent.
 - **Evidence Pack (retrieved on demand)**: ADRs, contracts, benchmarks, and prior decisions.
 
@@ -32,7 +32,7 @@ When a run exceeds budget:
 - keep only unresolved constraints in active context,
 - retrieve deeper detail from `.auro/charters/` only when needed.
 
-## Gap 2: charter Philosophy Conflicts
+## Gap 2: Charter Philosophy Conflicts
 
 If charters are treated as disposable branch artifacts, they stop representing the real system.
 

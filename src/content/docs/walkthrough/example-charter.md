@@ -1,5 +1,5 @@
 ---
-title: "Step 1: charter the Energy Monitor"
+title: "Step 1: Charter the Energy Monitor"
 description: Define user stories, requirements, and success criteria for the energy monitor.
 ---
 

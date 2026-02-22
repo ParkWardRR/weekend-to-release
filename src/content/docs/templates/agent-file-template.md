@@ -30,7 +30,7 @@ src/
 - npm run build -- Production build
 
 ## Code Style
-[Language-specific guidelines]
+[Language-level guidelines]
 - Named exports only
 - Functional components
 - Explicit return types
@@ -46,7 +46,7 @@ src/
 <!-- MANUAL ADDITIONS END -->
 ```
 
-## Agent-Specific Formats
+## Agent Formats
 
 | Agent | Format | Location |
 |-------|--------|----------|

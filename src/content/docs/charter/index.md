@@ -1,9 +1,9 @@
 ---
-title: The charter Phase
+title: The Charter Phase
 description: Define what to build with structured charters before writing any code.
 ---
 
-The charter phase transforms a feature idea into a structured charter. Run `/auro.charter "your feature description"` and Auro creates a branch, generates a charter from the template, and marks ambiguities.
+The Charter phase transforms a feature idea into a structured charter. Run `/auro.charter "your feature description"` and Auro creates a branch, generates a charter from the template, and marks ambiguities.
 
 ## What Gets Generated
 

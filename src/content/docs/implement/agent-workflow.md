@@ -48,6 +48,6 @@ After each phase, review the output:
 
 1. **Do the tests pass?** If not, fix before proceeding.
 2. **Does the output match the charter?** If not, the code is wrong.
-3. **Are constitutional articles respected?** If not, revise.
+3. **Do constitutional articles hold?** If not, revise.
 
 The agent marks tasks `[X]` as they complete. Incomplete tasks remain `[ ]`. You can see progress at a glance.

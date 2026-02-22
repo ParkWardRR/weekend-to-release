@@ -37,11 +37,11 @@ The agent walks you through each article, asking whether to keep, modify, or rem
 
 ```mermaid
 flowchart TD
-    C[Constitution] --> G1{charter Gate}
+    C[Constitution] --> G1{Charter Gate}
     C --> G2{Plan Gate}
     C --> G3{Task Gate}
 
-    S[charter] --> G1
+    S[Charter] --> G1
     G1 -->|pass| P[Plan]
     P --> G2
     G2 -->|pass| T[Tasks]
@@ -68,4 +68,4 @@ Edit `.auro/constitution.md` directly. All slash commands use the updated versio
 
 ## Next Steps
 
-With your constitution in place, head to the [charter phase](/weekend-to-release/charter/) to write structured charters. See [Principles](/weekend-to-release/principles/) for deep dives on each article.
+With your constitution in place, head to the [Charter phase](/weekend-to-release/charter/) to write structured charters. See [Principles](/weekend-to-release/principles/) for deep dives on each article.

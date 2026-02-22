@@ -1,5 +1,5 @@
 ---
-title: charter Template
+title: Charter Template
 description: The template used by /auro.charter to generate feature charters.
 ---
 

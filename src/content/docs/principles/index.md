@@ -25,7 +25,7 @@ Articles act as **phase gates** — checkpoints that charters must pass before m
 
 ```mermaid
 flowchart TD
-    S[charter] --> G1{Gate Check}
+    S[Charter] --> G1{Gate Check}
     G1 -->|Pass| P[Plan]
     G1 -->|Fail| S
     P --> G2{Gate Check}

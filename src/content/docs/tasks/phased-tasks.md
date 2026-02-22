@@ -3,7 +3,7 @@ title: Phased Task Lists
 description: Organize tasks into setup, foundational, story, and polish phases.
 ---
 
-Tasks are organized into phases that must execute in order. Each phase has a specific purpose.
+Tasks are organized into phases that must execute in order. Each phase has a defined purpose.
 
 ## Phase 1: Setup
 

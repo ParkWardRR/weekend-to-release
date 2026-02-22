@@ -11,7 +11,7 @@ The `/auro.analyze` command performs a read-only analysis of your charter artifa
 |---------------|---------------|
 | **Duplication** | Multiple tasks doing the same thing |
 | **Ambiguity** | Vague adjectives without metrics ("fast", "scalable") |
-| **Underspecification** | Tasks without mapped requirements |
+| **Underdefinition** | Tasks without mapped requirements |
 | **Constitution alignment** | Violations of constitutional articles |
 | **Coverage gaps** | Requirements with zero tasks |
 | **Inconsistencies** | Terminology drift, conflicting statements |

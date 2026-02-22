@@ -5,9 +5,9 @@ description: Understand the methodology behind Auro -- charters first, code seco
 
 Charter-Orchestrated Engineering (ACE) is a methodology where **charters are the primary artifact**, not code. Code exists to fulfill charters. When there is a conflict between charter and code, the code is wrong.
 
-## Code-First vs. charter-First
+## Code-First vs. Charter-First
 
-| | Code-First | charter-First (ACE) |
+| | Code-First | Charter-First (ACE) |
 |---|---|---|
 | **Starting point** | Open editor, start typing | Write a charter |
 | **Source of truth** | The codebase | The charter files |
@@ -28,8 +28,8 @@ flowchart TD
         A5 --> A4
     end
 
-    subgraph spec_first["charter-First ACE"]
-        B1[Idea] --> B2[charter]
+    subgraph charter_first["Charter-First ACE"]
+        B1[Idea] --> B2[Charter]
         B2 --> B3[Plan]
         B3 --> B4[Tasks]
         B4 --> B5[Code]
@@ -40,7 +40,7 @@ flowchart TD
 
 ## Three Core Concepts
 
-### 1. charters as Source of Truth
+### 1. Charters as Source of Truth
 
 Every project has a `.auro/` directory containing structured charters. These define what the software does, who it is for, and what success looks like. AI agents read these charters. Reviewers check code against these charters. The charters are never generated from code -- code is generated from charters.
 

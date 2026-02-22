@@ -3,7 +3,7 @@ title: Functional Requirements
 description: Number and track requirements with entity modeling.
 ---
 
-Functional requirements (FRs) are specific, testable statements about what the system must do. They are numbered sequentially and mapped to user stories.
+Functional requirements (FRs) are precise, testable statements about what the system must do. They are numbered sequentially and mapped to user stories.
 
 ## Format
 
@@ -33,7 +33,7 @@ Task
   - user_id: reference to User
 ```
 
-This is not a database schema. It is a conceptual model that the Plan phase will translate into technical specifics.
+This is not a database schema. It is a conceptual model that the Plan phase will translate into technical detail.
 
 ## Clarity Markers
 

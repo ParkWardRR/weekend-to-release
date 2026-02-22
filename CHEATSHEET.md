@@ -13,7 +13,7 @@ uv tool install auro-cli
 ## The Workflow
 
 ```
-Idea --> /auro.charter --> charter --> /auro.plan --> Plan --> /auro.tasks --> Tasks --> /auro.implement --> Ship
+Idea --> /auro.charter --> Charter --> /auro.plan --> Plan --> /auro.tasks --> Tasks --> /auro.implement --> Ship
 ```
 
 ## Commands
@@ -21,15 +21,15 @@ Idea --> /auro.charter --> charter --> /auro.plan --> Plan --> /auro.tasks --> T
 | Command | Phase | What It Does |
 |---------|-------|--------------|
 | `/auro.constitution` | Setup | Define project governing principles |
-| `/auro.charter` | 1. charter | Create feature charter (stories, requirements, criteria) |
-| `/auro.clarify` | 1. charter | Resolve [NEEDS CLARIFICATION] markers interactively |
+| `/auro.charter` | 1. Charter | Create feature charter (stories, requirements, criteria) |
+| `/auro.clarify` | 1. Charter | Resolve [NEEDS CLARIFICATION] markers interactively |
 | `/auro.plan` | 2. Plan | Generate technical plan with phase gates |
 | `/auro.tasks` | 3. Tasks | Break plan into phased task list with [P] markers |
 | `/auro.analyze` | 3. Tasks | Run consistency analysis across charter/plan/tasks |
 | `/auro.implement` | 4. Implement | Execute tasks phase by phase |
 | `/auro.checklist` | Any | Generate validation checklist for a feature |
 
-## charter Structure
+## Charter Structure
 
 ```
 User Stories (P1, P2, P3 priority)
@@ -98,8 +98,8 @@ Three gates that must pass before implementation:
 Not sure which command to use?
 
 - Have an idea but no charter? --> `/auro.charter`
-- charter has [NEEDS CLARIFICATION]? --> `/auro.clarify`
-- charter is clean, need a plan? --> `/auro.plan`
+- Charter has [NEEDS CLARIFICATION]? --> `/auro.clarify`
+- Charter is clean, need a plan? --> `/auro.plan`
 - Plan is ready, need tasks? --> `/auro.tasks`
 - Want to check consistency? --> `/auro.analyze`
 - Tasks are ready, time to build? --> `/auro.implement`

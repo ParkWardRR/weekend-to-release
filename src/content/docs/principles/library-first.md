@@ -47,10 +47,10 @@ During the **Plan** phase, the constitution gate checks for Library-First violat
 
 Library-First doesn't mean "never write code." Custom implementations are appropriate when:
 
-- **No library exists** for your specific need
+- **No library exists** for your exact need
 - **Available libraries are unmaintained** (no updates in 12+ months, unresolved security issues)
 - **The library is too heavy** — you need 5% of its features but it pulls in 50 dependencies
-- **Domain-specific logic** that no general library would cover
+- **Domain-tailored logic** that no general library would cover
 
 Document the justification in the plan:
 

@@ -1,9 +1,9 @@
 ---
 title: Checklist Template
-description: The meta-template for generating feature-specific validation checklists.
+description: The meta-template for generating feature-scoped validation checklists.
 ---
 
-The checklist template is a framework for creating feature-specific validation checklists. Run `/auro.checklist` to generate one for your current feature.
+The checklist template is a framework for creating feature-scoped validation checklists. Run `/auro.checklist` to generate one for your current feature.
 
 ## Structure
 

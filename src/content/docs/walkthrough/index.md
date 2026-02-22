@@ -18,7 +18,7 @@ A homeowner wants to:
 
 ```mermaid
 flowchart LR
-    A[Feature Idea] --> B[charter]
+    A[Feature Idea] --> B[Charter]
     B --> C[3 Stories, 5 Requirements]
     C --> D[Plan]
     D --> E[TypeScript + React + SQLite]
@@ -30,7 +30,7 @@ flowchart LR
 
 ## Steps
 
-1. [Step 1: charter](/weekend-to-release/walkthrough/example-charter/) -- Define user stories and requirements
+1. [Step 1: Charter](/weekend-to-release/walkthrough/example-charter/) -- Define user stories and requirements
 2. [Step 2: Plan](/weekend-to-release/walkthrough/example-plan/) -- Choose technology and architecture
 3. [Step 3: Tasks](/weekend-to-release/walkthrough/example-tasks/) -- Generate the task list
 4. [Step 4: Implement](/weekend-to-release/walkthrough/example-implement/) -- Build it with an AI agent

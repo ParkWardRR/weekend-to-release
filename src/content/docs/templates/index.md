@@ -9,7 +9,7 @@ Auro templates constrain AI behavior toward better outcomes. They prevent premat
 
 | Template | Used By | Purpose |
 |----------|---------|---------|
-| [charter Template](/weekend-to-release/templates/charter-template/) | `/auro.charter` | Structure feature charters |
+| [Charter Template](/weekend-to-release/templates/charter-template/) | `/auro.charter` | Structure feature charters |
 | [Plan Template](/weekend-to-release/templates/plan-template/) | `/auro.plan` | Structure implementation plans |
 | [Tasks Template](/weekend-to-release/templates/tasks-template/) | `/auro.tasks` | Structure task breakdowns |
 | [Constitution Template](/weekend-to-release/templates/constitution-template/) | `/auro.constitution` | Structure project principles |

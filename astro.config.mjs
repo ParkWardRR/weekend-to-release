@@ -28,14 +28,14 @@ export default defineConfig({
                 {
                     label: 'Foundations',
                     items: [
-                        { label: 'What is ACE?', slug: 'guide/what-is-ACE' },
-                        { label: 'Context and charter Integrity', slug: 'guide/context-and-charter-integrity' },
+                        { label: 'What is ACE?', slug: 'guide/what-is-ace' },
+                        { label: 'Context and Charter Integrity', slug: 'guide/context-and-charter-integrity' },
                         { label: 'Getting Started', slug: 'guide/getting-started' },
                         { label: 'Your Constitution', slug: 'guide/constitution' },
                     ],
                 },
                 {
-                    label: '1. charter',
+                    label: '1. Charter',
                     items: [
                         { label: 'Overview', slug: 'charter' },
                         { label: 'User Stories', slug: 'charter/user-stories' },
@@ -75,7 +75,7 @@ export default defineConfig({
                     collapsed: true,
                     items: [
                         { label: 'All Templates', slug: 'templates' },
-                        { label: 'charter Template', slug: 'templates/charter-template' },
+                        { label: 'Charter Template', slug: 'templates/charter-template' },
                         { label: 'Plan Template', slug: 'templates/plan-template' },
                         { label: 'Tasks Template', slug: 'templates/tasks-template' },
                         { label: 'Constitution Template', slug: 'templates/constitution-template' },
@@ -89,7 +89,7 @@ export default defineConfig({
                     collapsed: true,
                     items: [
                         { label: 'Example Project', slug: 'walkthrough' },
-                        { label: 'Step 1: charter', slug: 'walkthrough/example-charter' },
+                        { label: 'Step 1: Charter', slug: 'walkthrough/example-charter' },
                         { label: 'Step 2: Plan', slug: 'walkthrough/example-plan' },
                         { label: 'Step 3: Tasks', slug: 'walkthrough/example-tasks' },
                         { label: 'Step 4: Implement', slug: 'walkthrough/example-implement' },

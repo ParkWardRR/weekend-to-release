@@ -43,7 +43,7 @@ Why:
 
 - better cost-per-token during bursts
 - no fixed idle GPU burn
-- ability to select higher VRAM profiles only for specific jobs
+- ability to select higher VRAM profiles only for selected jobs
 
 Route via queue + worker heartbeats, and keep coordinator logic in GCP.
 

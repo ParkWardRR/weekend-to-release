@@ -9,7 +9,7 @@ The Plan phase takes your clean charter and produces a technical implementation 
 
 ```mermaid
 flowchart LR
-    S[charter] --> P0[Phase 0: Research]
+    S[Charter] --> P0[Phase 0: Research]
     P0 --> P1[Phase 1: Design]
     P1 --> O1[plan.md]
     P1 --> O2[research.md]
