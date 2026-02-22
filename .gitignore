@@ -13,6 +13,7 @@ yarn-error.log*
 node_modules
 dist
 build
+.astro
 
 # Python
 __pycache__/
