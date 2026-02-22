@@ -35,23 +35,20 @@ The agent walks you through each article, asking whether to keep, modify, or rem
 
 ## How It Flows Through Phases
 
-```mermaid
-flowchart TD
-    C[Constitution] --> G1{Charter Gate}
-    C --> G2{Plan Gate}
-    C --> G3{Task Gate}
-
-    S[Charter] --> G1
-    G1 -->|pass| P[Plan]
-    P --> G2
-    G2 -->|pass| T[Tasks]
-    T --> G3
-    G3 -->|pass| I[Implement]
-
-    G1 -->|fail| S
-    G2 -->|fail| P
-    G3 -->|fail| T
-```
+<div class="flow-gates" aria-label="Constitutional gate map">
+  <div class="flow-gate">
+    <div class="flow-gate-title">Constitution -> Charter Gate <span class="flow-chip">Pass -> Plan</span></div>
+    <p>Fail path loops back to Charter for correction.</p>
+  </div>
+  <div class="flow-gate">
+    <div class="flow-gate-title">Constitution -> Plan Gate <span class="flow-chip">Pass -> Tasks</span></div>
+    <p>Fail path loops back to Plan for redesign.</p>
+  </div>
+  <div class="flow-gate">
+    <div class="flow-gate-title">Constitution -> Task Gate <span class="flow-chip">Pass -> Implement</span></div>
+    <p>Fail path loops back to Tasks for restructuring and test coverage.</p>
+  </div>
+</div>
 
 At each gate, output is checked against the constitution. A charter violating Simplicity? Gate fails, revise the charter. A plan violating Library-First? Gate fails, revise the plan. Problems caught early, when they are cheap to fix.
 

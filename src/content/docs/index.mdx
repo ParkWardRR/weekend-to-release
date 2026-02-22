@@ -38,18 +38,18 @@ Each phase produces an artifact that feeds the next one. Nothing is left to gues
 
 ## How It Fits Together
 
-```mermaid
-flowchart LR
-    A[Idea] --> B["/auro.charter"]
-    B --> C[Charter]
-    C --> D["/auro.plan"]
-    D --> E[Plan]
-    E --> F["/auro.tasks"]
-    F --> G[Tasks]
-    G --> H["/auro.implement"]
-    H --> I[Working Code]
-    I -->|refine| C
-```
+<div class="flow-track" aria-label="ACE lifecycle">
+  <div class="flow-card"><span class="flow-label">01</span><p class="flow-title">Idea</p></div>
+  <div class="flow-card"><span class="flow-label">02</span><p class="flow-title">/auro.charter</p></div>
+  <div class="flow-card"><span class="flow-label">03</span><p class="flow-title">Charter</p></div>
+  <div class="flow-card"><span class="flow-label">04</span><p class="flow-title">/auro.plan</p></div>
+  <div class="flow-card"><span class="flow-label">05</span><p class="flow-title">Plan</p></div>
+  <div class="flow-card"><span class="flow-label">06</span><p class="flow-title">/auro.tasks</p></div>
+  <div class="flow-card"><span class="flow-label">07</span><p class="flow-title">Tasks</p></div>
+  <div class="flow-card"><span class="flow-label">08</span><p class="flow-title">/auro.implement</p></div>
+  <div class="flow-card"><span class="flow-label">09</span><p class="flow-title">Working Code</p></div>
+</div>
+<p class="flow-note">Loop: refinement feeds changes back into the Charter phase.</p>
 
 Each phase has a dedicated slash command. You run the command, the AI agent does the work within your constraints, and you review the output before moving on.
 

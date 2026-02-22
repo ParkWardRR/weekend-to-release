@@ -38,3 +38,141 @@ body {
     transform: translateY(-2px);
     border-color: var(--sl-color-accent);
 }
+
+/* App-like flow visuals (Mermaid replacement) */
+.flow-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.9rem;
+    margin: 1.1rem 0 1.25rem;
+}
+
+.flow-card {
+    position: relative;
+    border: 1px solid color-mix(in srgb, var(--sl-color-accent) 35%, var(--sl-color-gray-5));
+    background: linear-gradient(160deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+    border-radius: 14px;
+    padding: 0.8rem 0.9rem;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+}
+
+.flow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sl-color-accent), var(--sl-color-accent-high));
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.flow-label {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sl-color-gray-3);
+    margin-bottom: 0.35rem;
+}
+
+.flow-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--sl-color-white);
+    margin: 0;
+}
+
+.flow-subtitle {
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-2);
+    margin: 0.25rem 0 0;
+}
+
+.flow-note {
+    margin-top: -0.4rem;
+    color: var(--sl-color-gray-2);
+    font-size: 0.9rem;
+}
+
+.flow-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 1.25rem;
+}
+
+.flow-lane {
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.88);
+    padding: 0.85rem 0.95rem;
+}
+
+.flow-lane h4 {
+    margin: 0 0 0.6rem;
+    font-size: 0.9rem;
+}
+
+.flow-lane ol {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--sl-color-gray-2);
+}
+
+.flow-lane li + li {
+    margin-top: 0.25rem;
+}
+
+.flow-gates {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0 1.2rem;
+}
+
+.flow-gate {
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 0.7rem 0.85rem;
+}
+
+.flow-gate-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--sl-color-white);
+}
+
+.flow-chip {
+    border: 1px solid rgba(249, 115, 22, 0.5);
+    border-radius: 999px;
+    color: var(--sl-color-accent-high);
+    padding: 0.1rem 0.5rem;
+    font-size: 0.7rem;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.flow-gate p {
+    margin: 0.35rem 0 0;
+    color: var(--sl-color-gray-2);
+    font-size: 0.86rem;
+}
+
+.flow-output-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 0.65rem;
+    margin-top: 0.75rem;
+}
+
+.flow-output {
+    border: 1px dashed rgba(148, 163, 184, 0.35);
+    border-radius: 10px;
+    padding: 0.55rem 0.6rem;
+    color: var(--sl-color-gray-2);
+    font-size: 0.84rem;
+    background: rgba(2, 6, 23, 0.35);
+}

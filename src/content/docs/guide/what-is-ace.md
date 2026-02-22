@@ -18,25 +18,30 @@ Charter-Orchestrated Engineering (ACE) is a methodology where **charters are the
 
 ## The Two Paths
 
-```mermaid
-flowchart TD
-    subgraph code_first["Code-First"]
-        A1[Idea] --> A2[Code]
-        A2 --> A3[Bugs]
-        A3 --> A4[Fix]
-        A4 --> A5[More Bugs]
-        A5 --> A4
-    end
-
-    subgraph charter_first["Charter-First ACE"]
-        B1[Idea] --> B2[Charter]
-        B2 --> B3[Plan]
-        B3 --> B4[Tasks]
-        B4 --> B5[Code]
-        B5 --> B6[Working Software]
-        B6 -->|refine| B2
-    end
-```
+<div class="flow-split" aria-label="Code-first vs Charter-first">
+  <section class="flow-lane">
+    <h4>Code-First</h4>
+    <ol>
+      <li>Idea</li>
+      <li>Code</li>
+      <li>Bugs</li>
+      <li>Fix</li>
+      <li>More Bugs (loop)</li>
+    </ol>
+  </section>
+  <section class="flow-lane">
+    <h4>Charter-First (ACE)</h4>
+    <ol>
+      <li>Idea</li>
+      <li>Charter</li>
+      <li>Plan</li>
+      <li>Tasks</li>
+      <li>Code</li>
+      <li>Working Software</li>
+      <li>Refine back into Charter</li>
+    </ol>
+  </section>
+</div>
 
 ## Three Core Concepts
 

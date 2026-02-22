@@ -7,16 +7,27 @@ Phase gates are checkpoints where the plan is validated against your constitutio
 
 ## The Three Gates
 
-```mermaid
-flowchart TD
-    P[Plan] --> G1{Simplicity Gate}
-    G1 -->|pass| G2{Anti-Abstraction Gate}
-    G1 -->|fail| F1[Simplify architecture]
-    G2 -->|pass| G3{Integration-First Gate}
-    G2 -->|fail| F2[Remove wrappers]
-    G3 -->|pass| T[Tasks]
-    G3 -->|fail| F3[Add contracts]
-```
+<div class="flow-track" aria-label="Phase gate sequence">
+  <div class="flow-card"><span class="flow-label">Input</span><p class="flow-title">Plan</p></div>
+  <div class="flow-card"><span class="flow-label">Gate 1</span><p class="flow-title">Simplicity</p></div>
+  <div class="flow-card"><span class="flow-label">Gate 2</span><p class="flow-title">Anti-Abstraction</p></div>
+  <div class="flow-card"><span class="flow-label">Gate 3</span><p class="flow-title">Integration-First</p></div>
+  <div class="flow-card"><span class="flow-label">Pass Result</span><p class="flow-title">Tasks Ready</p></div>
+</div>
+<div class="flow-gates" aria-label="Gate fail actions">
+  <div class="flow-gate">
+    <div class="flow-gate-title"><span>Simplicity Gate</span><span class="flow-chip">Fail action</span></div>
+    <p>Simplify architecture and reduce moving parts.</p>
+  </div>
+  <div class="flow-gate">
+    <div class="flow-gate-title"><span>Anti-Abstraction Gate</span><span class="flow-chip">Fail action</span></div>
+    <p>Remove wrappers and use frameworks directly.</p>
+  </div>
+  <div class="flow-gate">
+    <div class="flow-gate-title"><span>Integration-First Gate</span><span class="flow-chip">Fail action</span></div>
+    <p>Define contracts before implementation work.</p>
+  </div>
+</div>
 
 ### Simplicity Gate (Article VII)
 

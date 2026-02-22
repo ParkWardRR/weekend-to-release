@@ -7,16 +7,18 @@ The Plan phase takes your clean charter and produces a technical implementation 
 
 ## Two Sub-Phases
 
-```mermaid
-flowchart LR
-    S[Charter] --> P0[Phase 0: Research]
-    P0 --> P1[Phase 1: Design]
-    P1 --> O1[plan.md]
-    P1 --> O2[research.md]
-    P1 --> O3[data-model.md]
-    P1 --> O4[contracts/]
-    P1 --> O5[quickstart.md]
-```
+<div class="flow-track" aria-label="Plan phase structure">
+  <div class="flow-card"><span class="flow-label">Input</span><p class="flow-title">Charter</p></div>
+  <div class="flow-card"><span class="flow-label">Phase 0</span><p class="flow-title">Research</p></div>
+  <div class="flow-card"><span class="flow-label">Phase 1</span><p class="flow-title">Design</p></div>
+</div>
+<div class="flow-output-grid" aria-label="Design outputs">
+  <div class="flow-output">plan.md</div>
+  <div class="flow-output">research.md</div>
+  <div class="flow-output">data-model.md</div>
+  <div class="flow-output">contracts/</div>
+  <div class="flow-output">quickstart.md</div>
+</div>
 
 **Phase 0 -- Research:** Resolves all remaining `[NEEDS CLARIFICATION]` items. Produces `research.md` documenting decisions, rationale, and rejected alternatives.
 

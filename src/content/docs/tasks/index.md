@@ -19,15 +19,16 @@ The Tasks phase takes your plan and generates an executable task list. Run `/aur
 
 ## Phase Decomposition
 
-```mermaid
-flowchart TD
-    P[Plan] --> S[Phase 1: Setup]
-    S --> F[Phase 2: Foundational]
-    F --> U1[Phase 3: P1 Stories]
-    U1 --> U2[Phase 4: P2 Stories]
-    U2 --> U3[Phase 5: P3 Stories]
-    U3 --> PO[Final: Polish]
-```
+<div class="flow-track" aria-label="Task phase decomposition">
+  <div class="flow-card"><span class="flow-label">Input</span><p class="flow-title">Plan</p></div>
+  <div class="flow-card"><span class="flow-label">Phase 1</span><p class="flow-title">Setup</p></div>
+  <div class="flow-card"><span class="flow-label">Phase 2</span><p class="flow-title">Foundational</p></div>
+  <div class="flow-card"><span class="flow-label">Phase 3</span><p class="flow-title">P1 Stories</p></div>
+  <div class="flow-card"><span class="flow-label">Phase 4</span><p class="flow-title">P2 Stories</p></div>
+  <div class="flow-card"><span class="flow-label">Phase 5</span><p class="flow-title">P3 Stories</p></div>
+  <div class="flow-card"><span class="flow-label">Final</span><p class="flow-title">Polish</p></div>
+</div>
+<p class="flow-note">Phases run in order; only `[P]` tasks inside the same phase run concurrently.</p>
 
 Each phase must complete before the next begins. Within a phase, `[P]` tasks can run simultaneously.
 

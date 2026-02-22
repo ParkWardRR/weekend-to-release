@@ -89,14 +89,14 @@ The agent breaks the plan into phased, parallel-ready task lists. Then `/auro.im
 
 ## The Feedback Loop
 
-```mermaid
-flowchart LR
-    A[Constitution] --> B[Charter]
-    B --> C[Plan]
-    C --> D[Tasks]
-    D --> E[Implement]
-    E -->|refine| B
-```
+<div class="flow-track" aria-label="Quick workflow feedback loop">
+  <div class="flow-card"><span class="flow-label">A</span><p class="flow-title">Constitution</p></div>
+  <div class="flow-card"><span class="flow-label">B</span><p class="flow-title">Charter</p></div>
+  <div class="flow-card"><span class="flow-label">C</span><p class="flow-title">Plan</p></div>
+  <div class="flow-card"><span class="flow-label">D</span><p class="flow-title">Tasks</p></div>
+  <div class="flow-card"><span class="flow-label">E</span><p class="flow-title">Implement</p></div>
+</div>
+<p class="flow-note">Loop: completed implementation informs the next Charter pass.</p>
 
 After implementation, update charters based on what you learned and run through the cycle again.
 

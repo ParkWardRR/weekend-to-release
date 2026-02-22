@@ -7,13 +7,13 @@ The Charter phase transforms a feature idea into a structured charter. Run `/aur
 
 ## What Gets Generated
 
-```mermaid
-flowchart LR
-    A[Feature Idea] --> B["/auro.charter"]
-    B --> C[Branch Created]
-    C --> D[charter.md Generated]
-    D --> E[Review & Clarify]
-```
+<div class="flow-track" aria-label="Charter generation flow">
+  <div class="flow-card"><span class="flow-label">Input</span><p class="flow-title">Feature Idea</p></div>
+  <div class="flow-card"><span class="flow-label">Command</span><p class="flow-title">/auro.charter</p></div>
+  <div class="flow-card"><span class="flow-label">Output</span><p class="flow-title">Branch Created</p></div>
+  <div class="flow-card"><span class="flow-label">Artifact</span><p class="flow-title">charter.md Generated</p></div>
+  <div class="flow-card"><span class="flow-label">Review</span><p class="flow-title">Clarify Ambiguities</p></div>
+</div>
 
 The charter contains four sections:
 

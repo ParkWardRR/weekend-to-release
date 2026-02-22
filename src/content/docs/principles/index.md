@@ -23,18 +23,20 @@ The **constitution** is the governance layer of Charter-Orchestrated Engineering
 
 Articles act as **phase gates** — checkpoints that charters must pass before moving to the next phase.
 
-```mermaid
-flowchart TD
-    S[Charter] --> G1{Gate Check}
-    G1 -->|Pass| P[Plan]
-    G1 -->|Fail| S
-    P --> G2{Gate Check}
-    G2 -->|Pass| T[Tasks]
-    G2 -->|Fail| P
-    T --> G3{Gate Check}
-    G3 -->|Pass| I[Implement]
-    G3 -->|Fail| T
-```
+<div class="flow-gates" aria-label="Phase gate chain">
+  <div class="flow-gate">
+    <div class="flow-gate-title">Gate 1: Charter to Plan <span class="flow-chip">Pass -> Plan</span></div>
+    <p>Fail path returns to Charter for corrections.</p>
+  </div>
+  <div class="flow-gate">
+    <div class="flow-gate-title">Gate 2: Plan to Tasks <span class="flow-chip">Pass -> Tasks</span></div>
+    <p>Fail path returns to Plan for architectural adjustment.</p>
+  </div>
+  <div class="flow-gate">
+    <div class="flow-gate-title">Gate 3: Tasks to Implement <span class="flow-chip">Pass -> Implement</span></div>
+    <p>Fail path returns to Tasks for sequencing and coverage fixes.</p>
+  </div>
+</div>
 
 Each gate verifies that the output of a phase doesn't violate any constitutional article. For example:
 
