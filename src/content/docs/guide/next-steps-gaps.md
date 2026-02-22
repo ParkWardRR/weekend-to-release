@@ -5,22 +5,28 @@ description: Priority roadmap for tightening execution quality and teaching user
 
 This project is strong on methodology and templates. The highest leverage now is execution clarity: faster onboarding, fewer unknowns during implementation, and tighter operator-specific guidance.
 
+## Direct Answer: Top Gaps + Next Steps
+
+1. **Operator-specific execution detail is the largest gap.** Close open placeholders in the runbooks first.
+2. **Unknowns need active tracking.** Keep `RESEARCH_NEEDED.md` current with status and source evidence.
+3. **User education needs layered onboarding + troubleshooting.** Implement the immediate onboarding and recovery items in this guide.
+
 ## Priority Next Steps
 
-### 0-2 Weeks (Immediate)
+### Immediate
 
 1. **Complete operator playbooks with verified commands**
 2. **Turn placeholders into validated snippets**
-3. **Add a "First 30 Minutes" path from install to first shipped artifact**
+3. **Add a "First Run" path from install to first shipped artifact**
 4. **Document failure recovery paths** (`plan` fails gate, tests fail, deployment fails)
 
-### 2-6 Weeks (Stabilization)
+### Stabilization
 
 1. **Add architecture variants** (single-service, API + worker, event-driven)
 2. **Add scale profiles** (solo builder, two-engineer team, multi-agent execution)
 3. **Add validation bundles** per phase (`charter` lint, plan gate checks, task consistency checks)
 
-### 6+ Weeks (Expansion)
+### Expansion
 
 1. **Add vertical examples** (mobile, data pipeline, internal tooling)
 2. **Add change-management workflow** for requirement drift
@@ -46,7 +52,7 @@ Open questions are spread across docs and chats.
 
 **Impact:** Knowledge gaps persist and recur.
 
-**Fix:** Maintain `RESEARCH_NEEDED.md` as a live backlog with owner + due date + source.
+**Fix:** Maintain `RESEARCH_NEEDED.md` as a live backlog with status + source evidence.
 
 ### Gap 3: Limited "What Good Looks Like" Evidence
 
@@ -72,8 +78,8 @@ Users need explicit recovery when gates fail or generated tasks are inconsistent
 
 ### Teach in Layers
 
-1. **Layer 1:** 15-minute orientation (concepts + one command chain)
-2. **Layer 2:** 60-minute guided build (copyable end-to-end runbook)
+1. **Layer 1:** quick orientation (concepts + one command chain)
+2. **Layer 2:** guided build (copyable end-to-end runbook)
 3. **Layer 3:** advanced operations (parallel agents, governance, scale)
 
 ### Teach with Artifacts, Not Theory
@@ -86,7 +92,7 @@ For each phase, show:
 
 ### Teach with Fast Feedback
 
-Include checkpoints every 5-10 minutes:
+Include frequent checkpoints:
 - "You should now have `<artifact>`"
 - "Run `<verification command>`"
 - "If it fails, do `<recovery step>`"
@@ -94,7 +100,6 @@ Include checkpoints every 5-10 minutes:
 ### Teach with Verified Deltas
 
 Every operator playbook should include:
-- tested date
 - tested version
 - known limitations
 - compatibility notes
@@ -107,4 +112,3 @@ Documentation is "operationally complete" when a new user can:
 2. Run charter -> plan -> tasks -> implement once end-to-end.
 3. Resolve one controlled failure using documented recovery steps.
 4. Deploy and verify a live artifact.
-
