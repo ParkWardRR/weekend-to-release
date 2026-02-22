@@ -22,7 +22,7 @@ charters/N-feature-name/
 
 ## Source Tree Options
 
-charter Kit supports three layouts. Pick the one that matches your project.
+ACE Toolkit supports three layouts. Pick the one that matches your project.
 
 ### Single Project
 

@@ -9,7 +9,7 @@ export default defineConfig({
     integrations: [
         starlight({
             title: 'Weekend-to-Release',
-            description: 'Learn Charter-Orchestrated Engineering with GitHub charter Kit',
+            description: 'Learn Charter-Orchestrated Engineering with ACE Toolkit',
             favicon: '/favicon.png',
             defaultLocale: 'root',
             locales: {

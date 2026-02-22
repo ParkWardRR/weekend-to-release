@@ -6,7 +6,7 @@ description: Execute the task list and build the energy monitor.
 We run:
 
 ```
-/speckit.implement
+/ACE.implement
 ```
 
 The agent reads `tasks.md` and begins executing phase by phase.

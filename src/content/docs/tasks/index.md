@@ -3,7 +3,7 @@ title: The Tasks Phase
 description: Break plans into phased, parallel-ready task lists.
 ---
 
-The Tasks phase takes your plan and generates an executable task list. Run `/speckit.tasks` and the agent produces tasks organized by phase with parallel markers and story tags.
+The Tasks phase takes your plan and generates an executable task list. Run `/ACE.tasks` and the agent produces tasks organized by phase with parallel markers and story tags.
 
 ## Task Format
 

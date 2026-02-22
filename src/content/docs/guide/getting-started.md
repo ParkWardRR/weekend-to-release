@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: Install GitHub charter Kit and initialize your first project.
+description: Install ACE Toolkit and initialize your first project.
 ---
 
 ## Prerequisites
@@ -12,7 +12,7 @@ description: Install GitHub charter Kit and initialize your first project.
 ## Installation
 
 ```bash
-uv tool install charter-cli --from git+https://github.com/github/charter-kit.git
+uv tool install charter-cli
 ```
 
 If you do not have `uv`:
@@ -45,7 +45,7 @@ The `.charter/` directory is the source of truth. Everything else is derived fro
 
 ## Agent Setup
 
-charter Kit auto-detects your AI agent. Verify with:
+ACE Toolkit auto-detects your AI agent. Verify with:
 
 ```bash
 charter doctor
@@ -58,7 +58,7 @@ Four commands, run inside your AI agent's chat:
 ### 1. Set Your Constitution
 
 ```
-/speckit.constitution
+/ACE.constitution
 ```
 
 Define the rules that every charter, plan, and task must follow. Once per project.
@@ -66,7 +66,7 @@ Define the rules that every charter, plan, and task must follow. Once per projec
 ### 2. Write a charter
 
 ```
-/speckit.charter
+/ACE.charter
 ```
 
 Describe what you want to build. The agent produces structured charters with user stories, requirements, and acceptance criteria.
@@ -74,7 +74,7 @@ Describe what you want to build. The agent produces structured charters with use
 ### 3. Generate a Plan
 
 ```
-/speckit.plan
+/ACE.plan
 ```
 
 The agent reads your charter and produces a technical plan with architecture decisions and phase gates.
@@ -82,10 +82,10 @@ The agent reads your charter and produces a technical plan with architecture dec
 ### 4. Create Tasks
 
 ```
-/speckit.tasks
+/ACE.tasks
 ```
 
-The agent breaks the plan into phased, parallel-ready task lists. Then `/speckit.implement` to execute them.
+The agent breaks the plan into phased, parallel-ready task lists. Then `/ACE.implement` to execute them.
 
 ## The Feedback Loop
 

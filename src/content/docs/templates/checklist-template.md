@@ -3,7 +3,7 @@ title: Checklist Template
 description: The meta-template for generating feature-specific validation checklists.
 ---
 
-The checklist template is a framework for creating feature-specific validation checklists. Run `/speckit.checklist` to generate one for your current feature.
+The checklist template is a framework for creating feature-specific validation checklists. Run `/ACE.checklist` to generate one for your current feature.
 
 ## Structure
 

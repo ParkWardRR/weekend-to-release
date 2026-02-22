@@ -6,11 +6,11 @@ description: Define user stories, requirements, and success criteria for the ene
 We run the charter command with our feature description:
 
 ```
-/speckit.charter "Home energy monitoring dashboard that displays real-time
+/ACE.charter "Home energy monitoring dashboard that displays real-time
 electricity usage, historical charts, and spike alerts"
 ```
 
-charter Kit creates branch `1-energy-monitor` and generates `charters/1-energy-monitor/charter.md`.
+ACE Toolkit creates branch `1-energy-monitor` and generates `charters/1-energy-monitor/charter.md`.
 
 ## Generated User Stories
 
@@ -54,7 +54,7 @@ FR-005: Display alert when a reading exceeds the configured threshold.
 
 ## Clarification
 
-We run `/speckit.clarify` to resolve the ambiguity:
+We run `/ACE.clarify` to resolve the ambiguity:
 
 **Question:** Should spike alerts persist or auto-dismiss?
 - **(Recommended) Auto-dismiss after 30 seconds** -- Keeps the UI clean, user has already seen it

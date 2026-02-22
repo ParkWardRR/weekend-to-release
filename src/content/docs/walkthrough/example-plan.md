@@ -6,7 +6,7 @@ description: Generate a technical implementation plan from the charter.
 We run the plan command:
 
 ```
-/speckit.plan
+/ACE.plan
 ```
 
 The agent reads the charter and generates `charters/1-energy-monitor/plan.md`.

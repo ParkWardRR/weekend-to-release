@@ -55,7 +55,7 @@ Three articles have the most day-to-day impact:
 The default constitution works for most projects. You can customize it with:
 
 ```
-/speckit.constitution
+/ACE.constitution
 ```
 
 Common customizations:

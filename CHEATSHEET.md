@@ -1,33 +1,33 @@
-# charter Kit Cheatsheet
+# ACE Toolkit Cheatsheet
 
-Quick reference for Charter-Orchestrated Engineering with GitHub charter Kit.
+Quick reference for Charter-Orchestrated Engineering with ACE Toolkit.
 
 ---
 
 ## Install
 
 ```bash
-uv tool install charter-cli --from git+https://github.com/github/charter-kit.git
+uv tool install charter-cli
 ```
 
 ## The Workflow
 
 ```
-Idea --> /speckit.charter --> charter --> /speckit.plan --> Plan --> /speckit.tasks --> Tasks --> /speckit.implement --> Ship
+Idea --> /ACE.charter --> charter --> /ACE.plan --> Plan --> /ACE.tasks --> Tasks --> /ACE.implement --> Ship
 ```
 
 ## Commands
 
 | Command | Phase | What It Does |
 |---------|-------|--------------|
-| `/speckit.constitution` | Setup | Define project governing principles |
-| `/speckit.charter` | 1. charter | Create feature charter (stories, requirements, criteria) |
-| `/speckit.clarify` | 1. charter | Resolve [NEEDS CLARIFICATION] markers interactively |
-| `/speckit.plan` | 2. Plan | Generate technical plan with phase gates |
-| `/speckit.tasks` | 3. Tasks | Break plan into phased task list with [P] markers |
-| `/speckit.analyze` | 3. Tasks | Run consistency analysis across charter/plan/tasks |
-| `/speckit.implement` | 4. Implement | Execute tasks phase by phase |
-| `/speckit.checklist` | Any | Generate validation checklist for a feature |
+| `/ACE.constitution` | Setup | Define project governing principles |
+| `/ACE.charter` | 1. charter | Create feature charter (stories, requirements, criteria) |
+| `/ACE.clarify` | 1. charter | Resolve [NEEDS CLARIFICATION] markers interactively |
+| `/ACE.plan` | 2. Plan | Generate technical plan with phase gates |
+| `/ACE.tasks` | 3. Tasks | Break plan into phased task list with [P] markers |
+| `/ACE.analyze` | 3. Tasks | Run consistency analysis across charter/plan/tasks |
+| `/ACE.implement` | 4. Implement | Execute tasks phase by phase |
+| `/ACE.checklist` | Any | Generate validation checklist for a feature |
 
 ## charter Structure
 
@@ -97,14 +97,14 @@ Three gates that must pass before implementation:
 
 Not sure which command to use?
 
-- Have an idea but no charter? --> `/speckit.charter`
-- charter has [NEEDS CLARIFICATION]? --> `/speckit.clarify`
-- charter is clean, need a plan? --> `/speckit.plan`
-- Plan is ready, need tasks? --> `/speckit.tasks`
-- Want to check consistency? --> `/speckit.analyze`
-- Tasks are ready, time to build? --> `/speckit.implement`
-- Need project principles? --> `/speckit.constitution`
+- Have an idea but no charter? --> `/ACE.charter`
+- charter has [NEEDS CLARIFICATION]? --> `/ACE.clarify`
+- charter is clean, need a plan? --> `/ACE.plan`
+- Plan is ready, need tasks? --> `/ACE.tasks`
+- Want to check consistency? --> `/ACE.analyze`
+- Tasks are ready, time to build? --> `/ACE.implement`
+- Need project principles? --> `/ACE.constitution`
 
 ---
 
-**Official repo:** [github.com/github/charter-kit](https://github.com/github/charter-kit)
+**Official repo:** Use your organization's approved ACE toolkit repository.

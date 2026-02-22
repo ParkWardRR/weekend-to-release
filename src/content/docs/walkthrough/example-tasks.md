@@ -6,7 +6,7 @@ description: Break the plan into phased, parallel-ready tasks.
 We run:
 
 ```
-/speckit.tasks
+/ACE.tasks
 ```
 
 The agent reads the plan, charter, and data model, then generates `charters/1-energy-monitor/tasks.md`.

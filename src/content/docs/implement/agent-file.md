@@ -3,7 +3,7 @@ title: Agent Guidance File
 description: Auto-generated context files that ground AI agents in your project.
 ---
 
-charter Kit generates an agent-specific guidance file that provides persistent context about your project. This file is automatically updated when you run `/speckit.plan`.
+ACE Toolkit generates an agent-specific guidance file that provides persistent context about your project. This file is automatically updated when you run `/ACE.plan`.
 
 ## What It Contains
 
@@ -20,12 +20,12 @@ charter Kit generates an agent-specific guidance file that provides persistent c
 | Claude Code | `.claude/CLAUDE.md` |
 | GitHub Copilot | `.github/copilot-instructions.md` |
 | Cursor | `.cursor/rules` |
-| Windsurf | `.windsurf/workflows/speckit.md` |
-| Gemini CLI | `.gemini/commands/speckit.toml` |
+| Windsurf | `.windsurf/workflows/ACE.md` |
+| Gemini CLI | `.gemini/commands/ACE.toml` |
 
 ## How It Works
 
-When you run `/speckit.plan`, the `update-agent-context` script:
+When you run `/ACE.plan`, the `update-agent-context` script:
 
 1. Scans all `plan.md` files for technology references
 2. Extracts the project structure

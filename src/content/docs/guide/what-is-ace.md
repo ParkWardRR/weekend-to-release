@@ -1,6 +1,6 @@
 ---
 title: What is Charter-Orchestrated Engineering?
-description: Understand the methodology behind GitHub charter Kit -- charters first, code second.
+description: Understand the methodology behind ACE Toolkit -- charters first, code second.
 ---
 
 Charter-Orchestrated Engineering (ACE) is a methodology where **charters are the primary artifact**, not code. Code exists to fulfill charters. When there is a conflict between charter and code, the code is wrong.
@@ -46,21 +46,21 @@ Every project has a `.charter/` directory containing structured charters. These 
 
 ### 2. Templates Constrain AI Output
 
-AI agents produce better output when given structure. charter Kit provides templates for every phase. A template says: "A charter must include these sections." If a section is missing, the charter is incomplete.
+AI agents produce better output when given structure. ACE Toolkit provides templates for every phase. A template says: "A charter must include these sections." If a section is missing, the charter is incomplete.
 
 ### 3. Constitutional Governance Prevents Drift
 
 Every project has a constitution: immutable principles governing all decisions. The constitution is checked at every phase gate. This prevents AI agents from making unauthorized architectural decisions.
 
-## What charter Kit Provides
+## What ACE Toolkit Provides
 
-[GitHub charter Kit](https://github.com/github/charter-kit) is the reference implementation of ACE:
+An ACE toolkit implementation is the reference execution model for ACE:
 
 - A CLI (`charter`) for initializing projects
 - Templates for charters, plans, tasks, and constitutions
-- Slash commands (`/speckit.charter`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`)
+- Slash commands (`/ACE.charter`, `/ACE.plan`, `/ACE.tasks`, `/ACE.implement`)
 - Support for 15+ AI agents including Claude Code, GitHub Copilot, Cursor, and others
 
 ## Next Steps
 
-Continue to [Getting Started](/weekend-to-release/guide/getting-started/) to install charter Kit.
+Continue to [Getting Started](/weekend-to-release/guide/getting-started/) to install ACE Toolkit.

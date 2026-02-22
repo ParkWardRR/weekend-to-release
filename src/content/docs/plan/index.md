@@ -3,7 +3,7 @@ title: The Plan Phase
 description: Translate charters into technical implementation plans.
 ---
 
-The Plan phase takes your clean charter and produces a technical implementation plan. Run `/speckit.plan` and the agent generates architecture decisions, phase gates, and supporting documents.
+The Plan phase takes your clean charter and produces a technical implementation plan. Run `/ACE.plan` and the agent generates architecture decisions, phase gates, and supporting documents.
 
 ## Two Sub-Phases
 

@@ -3,7 +3,7 @@ title: Agent File Template
 description: The template for auto-generated agent guidance files.
 ---
 
-The agent file template auto-populates from your charter-kit artifacts to give AI agents persistent project context.
+The agent file template auto-populates from your ACE-toolkit artifacts to give AI agents persistent project context.
 
 ## Structure
 
@@ -53,7 +53,7 @@ src/
 | Claude Code | Markdown | `.claude/CLAUDE.md` |
 | Copilot | Markdown | `.github/copilot-instructions.md` |
 | Cursor | Markdown | `.cursor/rules` |
-| Gemini | TOML | `.gemini/commands/speckit.toml` |
-| Windsurf | Markdown | `.windsurf/workflows/speckit.md` |
+| Gemini | TOML | `.gemini/commands/ACE.toml` |
+| Windsurf | Markdown | `.windsurf/workflows/ACE.md` |
 
 The content is the same across agents. Only the file format and location change.

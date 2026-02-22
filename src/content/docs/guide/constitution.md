@@ -11,7 +11,7 @@ Without a constitution, AI agents make their own architectural decisions. They p
 
 ## The Default 9 Articles
 
-charter Kit ships with 9 articles. Customize, remove, or add your own.
+ACE Toolkit ships with 9 articles. Customize, remove, or add your own.
 
 | # | Article | Rule |
 |---|---------|------|
@@ -28,7 +28,7 @@ charter Kit ships with 9 articles. Customize, remove, or add your own.
 ## Creating Your Constitution
 
 ```
-/speckit.constitution
+/ACE.constitution
 ```
 
 The agent walks you through each article, asking whether to keep, modify, or remove it. The result saves to `.charter/constitution.md`.

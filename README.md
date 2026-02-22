@@ -2,9 +2,9 @@
 
 [**START LEARNING (LIVE SITE)**](https://ParkWardRR.github.io/weekend-to-release/)
 
-## Charter-Orchestrated Engineering with GitHub charter Kit
+## Charter-Orchestrated Engineering with ACE Toolkit
 
-A practical guide to building software with AI agents using [GitHub charter Kit](https://github.com/github/charter-kit). Stop guessing, start specifying.
+A practical guide to building software with AI agents using an ACE toolkit. Stop guessing, start specifying.
 
 This site teaches **Charter-Orchestrated Engineering (ACE)** -- a methodology where charters are the primary artifact, not code. You write charters, and AI agents generate the implementation.
 
@@ -12,10 +12,10 @@ This site teaches **Charter-Orchestrated Engineering (ACE)** -- a methodology wh
 
 | Phase | Command | What Happens |
 |-------|---------|--------------|
-| **charter** | `/speckit.charter` | Define user stories, requirements, and success criteria |
-| **Plan** | `/speckit.plan` | Translate charters into technical plans with phase gates |
-| **Tasks** | `/speckit.tasks` | Break plans into phased, parallel-ready task lists |
-| **Implement** | `/speckit.implement` | AI agent executes tasks, you review and ship |
+| **charter** | `/ACE.charter` | Define user stories, requirements, and success criteria |
+| **Plan** | `/ACE.plan` | Translate charters into technical plans with phase gates |
+| **Tasks** | `/ACE.tasks` | Break plans into phased, parallel-ready task lists |
+| **Implement** | `/ACE.implement` | AI agent executes tasks, you review and ship |
 
 ## Tech Stack
 

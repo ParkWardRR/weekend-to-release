@@ -1,6 +1,6 @@
 ---
 title: charter Template
-description: The template used by /speckit.charter to generate feature charters.
+description: The template used by /ACE.charter to generate feature charters.
 ---
 
 The charter template structures every feature charter into consistent sections.

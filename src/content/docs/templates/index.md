@@ -1,20 +1,20 @@
 ---
 title: Templates
-description: Overview of all charter Kit templates and when to use each one.
+description: Overview of all ACE Toolkit templates and when to use each one.
 ---
 
-charter Kit templates constrain AI behavior toward better outcomes. They prevent premature implementation, force clarity markers, structure thinking through checklists, and enforce test-first discipline.
+ACE Toolkit templates constrain AI behavior toward better outcomes. They prevent premature implementation, force clarity markers, structure thinking through checklists, and enforce test-first discipline.
 
 ## Available Templates
 
 | Template | Used By | Purpose |
 |----------|---------|---------|
-| [charter Template](/weekend-to-release/templates/charter-template/) | `/speckit.charter` | Structure feature charters |
-| [Plan Template](/weekend-to-release/templates/plan-template/) | `/speckit.plan` | Structure implementation plans |
-| [Tasks Template](/weekend-to-release/templates/tasks-template/) | `/speckit.tasks` | Structure task breakdowns |
-| [Constitution Template](/weekend-to-release/templates/constitution-template/) | `/speckit.constitution` | Structure project principles |
-| [Checklist Template](/weekend-to-release/templates/checklist-template/) | `/speckit.checklist` | Structure validation checklists |
-| [Agent File Template](/weekend-to-release/templates/agent-file-template/) | `/speckit.plan` | Structure agent guidance files |
+| [charter Template](/weekend-to-release/templates/charter-template/) | `/ACE.charter` | Structure feature charters |
+| [Plan Template](/weekend-to-release/templates/plan-template/) | `/ACE.plan` | Structure implementation plans |
+| [Tasks Template](/weekend-to-release/templates/tasks-template/) | `/ACE.tasks` | Structure task breakdowns |
+| [Constitution Template](/weekend-to-release/templates/constitution-template/) | `/ACE.constitution` | Structure project principles |
+| [Checklist Template](/weekend-to-release/templates/checklist-template/) | `/ACE.checklist` | Structure validation checklists |
+| [Agent File Template](/weekend-to-release/templates/agent-file-template/) | `/ACE.plan` | Structure agent guidance files |
 
 ## Why Templates Matter
 
