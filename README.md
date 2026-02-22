@@ -28,6 +28,11 @@ See:
 
 - `src/content/docs/guide/context-and-charter-integrity.md`
 - `src/content/docs/templates/architecture-build-template.md`
+- `src/content/docs/guide/next-steps-gaps.md`
+- `src/content/docs/walkthrough/claude-conductor-e2e.md`
+- `src/content/docs/walkthrough/google-antigravity-e2e.md`
+- `src/content/docs/walkthrough/xcode-e2e.md`
+- `RESEARCH_NEEDED.md`
 
 ## Tech Stack
 

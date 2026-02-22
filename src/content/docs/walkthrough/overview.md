@@ -34,3 +34,13 @@ A homeowner wants to:
 2. [Step 2: Plan](/weekend-to-release/walkthrough/example-plan/) -- Choose technology and architecture
 3. [Step 3: Tasks](/weekend-to-release/walkthrough/example-tasks/) -- Generate the task list
 4. [Step 4: Implement](/weekend-to-release/walkthrough/example-implement/) -- Build it with an AI agent
+
+## Operator End-to-End Playbooks
+
+Use these when you need execution detail for a specific environment:
+
+1. [End-to-End: Claude + Conductor](/weekend-to-release/walkthrough/claude-conductor-e2e/)
+2. [End-to-End: Google Antigravity](/weekend-to-release/walkthrough/google-antigravity-e2e/)
+3. [End-to-End: Xcode](/weekend-to-release/walkthrough/xcode-e2e/)
+
+Each playbook includes `[RESEARCH REQUIRED]` markers where environment-specific details must be validated.

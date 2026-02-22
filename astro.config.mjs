@@ -30,6 +30,7 @@ export default defineConfig({
                     items: [
                         { label: 'What is ACE?', slug: 'guide/what-is-ace' },
                         { label: 'Context and Charter Integrity', slug: 'guide/context-and-charter-integrity' },
+                        { label: 'Next Steps, Gaps, Education', slug: 'guide/next-steps-gaps' },
                         { label: 'Getting Started', slug: 'guide/getting-started' },
                         { label: 'Your Constitution', slug: 'guide/constitution' },
                     ],
@@ -88,11 +89,14 @@ export default defineConfig({
                     label: 'Walkthrough',
                     collapsed: true,
                     items: [
-                        { label: 'Example Project', slug: 'walkthrough' },
+                        { label: 'Example Project', slug: 'walkthrough/overview' },
                         { label: 'Step 1: Charter', slug: 'walkthrough/example-charter' },
                         { label: 'Step 2: Plan', slug: 'walkthrough/example-plan' },
                         { label: 'Step 3: Tasks', slug: 'walkthrough/example-tasks' },
                         { label: 'Step 4: Implement', slug: 'walkthrough/example-implement' },
+                        { label: 'End-to-End: Claude + Conductor', slug: 'walkthrough/claude-conductor-e2e' },
+                        { label: 'End-to-End: Google Antigravity', slug: 'walkthrough/google-antigravity-e2e' },
+                        { label: 'End-to-End: Xcode', slug: 'walkthrough/xcode-e2e' },
                     ],
                 },
                 {
