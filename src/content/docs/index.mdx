@@ -1,40 +1,60 @@
 ---
 title: Weekend-to-Release
-description: Build and Ship with AI
+description: Charter-Orchestrated Engineering with GitHub charter Kit
 template: splash
 hero:
-  tagline: A step-by-step guide to going from a blank page to a public release, using AI agents as your development team.
-  image:
-    file: ../../assets/hero_starlight.png
+  tagline: "Stop guessing. Start specifying. A practical guide to building software with AI agents using GitHub charter Kit's charter-driven methodology."
   actions:
     - text: Start Learning
-      link: /contributors/
+      link: /weekend-to-release/guide/what-is-ACE/
       icon: right-arrow
       variant: primary
-    - text: View on GitHub
-      link: https://github.com/ParkWardRR/weekend-to-release
+    - text: View charter Kit
+      link: https://github.com/github/charter-kit
       icon: external
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## The Strategy
+## The ACE Workflow
+
+Charter-Orchestrated Engineering breaks building software into four repeatable phases.
+Each phase produces an artifact that feeds the next one. Nothing is left to guesswork.
 
 <CardGrid stagger>
   <Card title="charter" icon="pencil">
-    Define exactly what to build. AI is your architect.
+    Define what to build with structured charters. User stories, requirements, and success criteria -- all before a single line of code.
   </Card>
-  <Card title="Build" icon="hammer">
-    Let the agents write the code. You review and merge.
+  <Card title="Plan" icon="setting">
+    Translate charters into technical plans with phase gates and constitutional checks. Every decision traces to a requirement.
   </Card>
-  <Card title="Test" icon="approve-check-circle">
-    Verify functionality. Smoke tests and config checks.
+  <Card title="Tasks" icon="list-format">
+    Break plans into phased, parallel-ready task lists for AI agents. Each task is small, testable, and independent.
   </Card>
-  <Card title="Ship" icon="rocket">
-    Release to the world. Versioning and distribution.
+  <Card title="Implement" icon="rocket">
+    Hand tasks to your AI agent. Review the output, run the tests, ship it.
   </Card>
 </CardGrid>
 
-## Contributors
+## How It Fits Together
 
-Check out the [Contributors Page](/contributors/) to see who built this.
+```mermaid
+flowchart LR
+    A[Idea] --> B["/speckit.charter"]
+    B --> C[charter]
+    C --> D["/speckit.plan"]
+    D --> E[Plan]
+    E --> F["/speckit.tasks"]
+    F --> G[Tasks]
+    G --> H["/speckit.implement"]
+    H --> I[Working Code]
+    I -->|refine| C
+```
+
+Each phase has a dedicated slash command. You run the command, the AI agent does the work within your constraints, and you review the output before moving on.
+
+The charter is the source of truth at every step. If the code does not match the charter, the code is wrong.
+
+## Get Started
+
+Head to [What is ACE?](/weekend-to-release/guide/what-is-ACE/) to understand the methodology, or jump to [Getting Started](/weekend-to-release/guide/getting-started/) to install charter Kit now.

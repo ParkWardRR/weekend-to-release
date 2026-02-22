@@ -1,46 +1,26 @@
 {
   "name": "weekend-to-release",
-  "version": "1.0.0",
-  "description": "<div align=\"center\">",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "version": "2.0.0",
+  "description": "Learn Charter-Orchestrated Engineering with GitHub charter Kit",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "generate:curriculum": "node tools/generate_curriculum.js"
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ParkWardRR/weekend-to-release.git"
   },
-  "keywords": [],
   "author": "ParkWardRR",
-  "contributors": [
-    {
-      "name": "Antigravity",
-      "url": "https://deepmind.google/technologies/gemini/"
-    }
-  ],
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/ParkWardRR/weekend-to-release/issues"
   },
-  "homepage": "https://github.com/ParkWardRR/weekend-to-release#readme",
-  "devDependencies": {
-    "mermaid": "^11.12.2",
-    "playwright": "^1.58.2"
-  },
+  "homepage": "https://parkwardrr.github.io/weekend-to-release/",
   "dependencies": {
     "@astrojs/starlight": "^0.37.6",
     "astro": "^5.17.1",
-    "starlight-image-zoom": "^0.13.2",
-    "starlight-links-validator": "^0.19.2",
-    "starlight-plugin-icons": "^1.1.3",
-    "starlight-sidebar-topics": "^0.6.2",
-    "starlight-utils": "^1.0.0"
+    "starlight-image-zoom": "^0.13.2"
   }
 }
